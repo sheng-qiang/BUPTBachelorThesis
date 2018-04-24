@@ -1,0 +1,247 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                  %
+%   Copyright (c) 2010 - 2011 Caspar Zhang <casparant@gmail.com>   %
+%                                                                  %
+%   This copyrighted material is made available to anyone wishing  %
+%   to use, modify, copy, or redistribute it subject to the terms  %
+%   and conditions of the GNU General Public License version 2.    %
+%                                                                  %
+%   This program is distributed in the hope that it will be        %
+%   useful, but WITHOUT ANY WARRANTY; without even the implied     %
+%   warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR        %
+%   PURPOSE. See the GNU General Public License for more details.  %
+%                                                                  %
+%   You should have received a copy of the GNU General Public      %
+%   License along with this program; if not, write to the Free     %
+%   Software Foundation, Inc., 51 Franklin Street, Fifth Floor,    %
+%   Boston, MA 02110-1301, USA.                                    %
+%                                                                  %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%
+\usepackage[fntef]{ctex} % invole CJKfntef
+\usepackage{ctex}
+\usepackage{setspace} % spacing
+\usepackage{xcolor}   % color
+\usepackage{xltxtra}  % print a XeLaTeX
+
+% Font family
+\setmainfont[Mapping=tex-text]{Times New Roman}
+
+% Font size
+\newcommand{\chuhao}{\zihao{0}}
+\newcommand{\xiaochuhao}{\zihao{-0}}
+\newcommand{\yihao}{\zihao{1}}
+\newcommand{\xiaoyihao}{\zihao{-1}}
+\newcommand{\erhao}{\zihao{2}}
+\newcommand{\xiaoerhao}{\zihao{-2}}
+\newcommand{\sanhao}{\zihao{3}}
+\newcommand{\xiaosanhao}{\zihao{-3}}
+\newcommand{\sihao}{\zihao{4}}
+\newcommand{\xiaosihao}{\zihao{-4}}
+\newcommand{\wuhao}{\zihao{5}}
+\newcommand{\xiaowuhao}{\zihao{-5}}
+\newcommand{\liuhao}{\zihao{6}}
+\newcommand{\xiaoliuhao}{\zihao{-6}}
+\newcommand{\qihao}{\zihao{7}}
+\newcommand{\bahao}{\zihao{8}}
+% Normal font size is SiHao
+\renewcommand{\normalsize}{\xiaosihao\songti\normalfont}
+
+% Serveral Font pre-setting
+\newcommand{\thesistitlefont}{\centering\heiti\sanhao\textbf} %论文题目的字体
+\newcommand{\thesistitleenfont}{\centering\sanhao\bf}     %论文英文题目的字体
+\newcommand{\covernamefont}{\heiti\yihao\bf}    % 封面上“本科论文”字样的字体
+\newcommand{\coveritemsfont}{\songti\sanhao\bf} % 封面上姓名等条目的字体
+\newcommand{\coverdatefont}{\songti\sanhao\bf}  % 封面上的日期的字体
+\newcommand{\statetitlefirst}{\songti\xiaosanhao\bf}   %诚信声明标题第一行的字体
+\newcommand{\statetitlesecond}{\songti\xiaosanhao\bf}  %诚信声明标题第二行的字体
+\newcommand{\abscnname}{\heiti\xiaosanhao\textbf}         % 中文“摘要”字样的字体
+\newcommand{\abscnkey}{\heiti\xiaosihao\textbf}       % 中文摘要“关键字”字样的字体
+\newcommand{\abscnkeys}{\songti\xiaosihao\normalfont} % 中文摘要关键字的字体
+\newcommand{\absenname}{\xiaosanhao\textbf}               % 英文``Abstract''字样的字体
+\newcommand{\absenkey}{\xiaosihao\textbf}                 % 英文``KEY WORDS''字样的字体
+\newcommand{\absenkeys}{\xiaosihao\normalfont}        % 英文关键字的字体
+\newcommand{\headfont}{\songti\xiaowuhao\normalfont}             % 页眉字体
+\newcommand{\toctitlefont}{\heiti\sanhao\textbf}            % “目录”字样的字体
+\newcommand{\tocchapterfont}{\heiti\xiaosihao} % 目录上第X章的字体
+\newcommand{\tocsectionfont}{\songti\xiaosihao\normalfont}         % 目录上X.Y节的字体
+\newcommand{\tocsubsectionfont}{\songti\xiaosihao\normalfont}      % 目录上X.Y.Z小节的字体
+\newcommand{\textchapterfont}{\centering\heiti\sanhao\bfseries} % 正文上第X章的字体
+\newcommand{\textsectionfont}{\heiti\sihao\bfseries}            % 正文上X.Y节的字体
+\newcommand{\textsubsectionfont}{\heiti\xiaosihao\bfseries}     % 正文上X.Y.Z小节的字体
+\newcommand{\footnotefont}{\songti\xiaowuhao\normalfont}     % 脚注字体
+%\newcommand{\ftcaptionfont}{\kaishu\wuhao\normalfont}         % 图表标题的字体
+\newcommand{\ftcaptionfont}{\kaishu\wuhao}         % 图表标题的字体
+\newcommand{\reftitlefont}{\heiti\sanhao\textbf}      % “参考文献”字样的字体
+\newcommand{\refbodyfont}{\songti\wuhao\normalfont}          % 参考文献字体
+\newcommand{\thanktitlefont}{\heiti\sanhao\textbf}    % “致谢”字样的字体
+\newcommand{\appendixtitlefont}{\heiti\sanhao\textbf} % “附录”字样的字体
+
+% Word spacing
+% Usage: \ziju{spacing} spacing can be 1em, 10pt, etc.
+%\newcommand{\ziju}[1]{\renewcommand{\CJKglue}{\hskip #1}}
+
+%%%%%% Page Style %%%%%%
+
+% Margin
+% FIXME: Not very precise, but meets the need of the Word template.
+\usepackage[left=2.5cm,margin=2.5cm,headheight=1.5cm,footskip=1.5cm]{geometry}
+
+% Header and footer
+\usepackage{fancyhdr}
+\fancyhf{}  % clear head and foot
+\fancyhead[C]{\headfont{北京邮电大学本科毕业设计(论文)}}
+\fancyfoot[C]{\thepage}
+
+% Bookmark  (Chinese bookmark supported)
+\usepackage[xetex, pdfstartview=FitH, 
+bookmarksnumbered=true, bookmarksopen=true, colorlinks=true, 
+pdfborder=001, linkcolor=black, citecolor=black]{hyperref}
+
+% Line spread
+\renewcommand{\baselinestretch}{1.2}
+% \setlength{\itemsep}{-5pt} % item seperate too wide
+
+% Indentation
+%\usepackage{indentfirst} 
+%\setlength{\parindent}{2em} % indent 2em
+
+% Footnote
+\usepackage[perpage]{footmisc}
+\usepackage{footnpag} % footnote per page
+\usepackage{footnote}
+\let\ftnt=\footnote
+\renewcommand{\footnote}[1]{\ftnt{\footnotefont{#1}}} % footnote fontstyle
+
+%%%%%% Detail style %%%%%%
+% Underline
+% Usage: \ul[length]{<text>}
+\makeatletter
+\newcommand\ul[2][4cm]{\hskip1pt\underline{\hb@xt@ #1{\hss#2\hss}}\hskip3pt}
+\makeatother
+\def\ULthickness{1.1pt}%
+
+% Content style
+\usepackage{titletoc}
+\renewcommand\contentsname{\centerline{\toctitlefont{目\qquad{}录}}}
+\titlecontents{chapter}[0em]{\tocchapterfont}
+    {\CTEXnumber{\CJKsection}{\thecontentslabel}{第\CJKsection{章}\quad{}}}
+    {}
+    {\hspace{.5em}\titlerule*[10pt]{$\cdot$}\contentspage}
+\titlecontents{section}[2em]{\tocsectionfont}{%
+    \thecontentslabel\quad{}}{}{%
+    \hspace{.5em}\titlerule*[10pt]{$\cdot$}\contentspage}%
+\titlecontents{subsection}[3em]{\tocsubsectionfont}{%
+    \thecontentslabel\quad{}}{}{%
+    \hspace{.5em}\titlerule*[10pt]{$\cdot$}\contentspage}%
+\makeatletter % Content Page style
+\renewcommand\frontmatter{%
+    \if@openright\cleardoublepage\else\clearpage\fi%
+    \@mainmatterfalse%
+    \pagenumbering{Roman}% Roman style page number
+    \pagestyle{plain}}%
+\makeatother%
+
+\makeatletter % Translation Page style
+\renewcommand\backmatter{%
+    \if@openright\cleardoublepage\else\clearpage\fi%
+    \@mainmatterfalse%
+    \pagestyle{empty}
+}
+\makeatother%
+
+% Text style
+\usepackage{titlesec}
+\titleformat{\chapter}[hang]{\textchapterfont}{第\chinese{chapter}章}{1em}{}
+\titlespacing{\chapter}{0pt}{3ex plus .5ex minus .5ex}{3ex plus .5ex minus .5ex} % 缩短章节标题的上边距
+\titleformat{\section}{\textsectionfont}{\thesection}{1em}{}
+\titleformat{\subsection}{\textsubsectionfont}{\qquad{}\thesubsection}{1em}{}
+\titleformat{\subsubsection}{\textsubsectionfont}{\qquad{}\thesubsubsection}{0.5em}{}
+
+% Reference style
+% \usepackage[numbers,sort&compress]{natbib}
+\usepackage[super,numbers,sort&compress]{natbib}
+%\usepackage[backend=biber,texencoding=utf8,bibencoding=utf8]{biblatex}
+\renewcommand\bibname{\centerline{\reftitlefont{参考文献}}}
+%\renewcommand{\citet}[1]{\textsuperscript{\cite{#1}}}
+\setcitestyle{square}
+
+% Appendix
+% TODO: this needs imporvement
+\usepackage{appendix}
+
+%% Some tweaking/features/styles
+
+% Figure & Table
+%\usepackage{caption}
+\usepackage{caption2,caption3}
+\renewcommand{\captionfont}{\ftcaptionfont}
+\renewcommand{\captionlabelfont}{\ftcaptionfont}
+\renewcommand{\captionlabeldelim}{}
+\renewcommand{\tablename}{表}
+\renewcommand{\thetable}{~\arabic{chapter}-\arabic{table}~}
+\renewcommand{\figurename}{图}
+\renewcommand{\thefigure}{~\arabic{chapter}-\arabic{figure}~}
+\renewcommand{\theequation}{\arabic{chapter}-\arabic{equation}~}
+
+% figure tweaking
+% New figure environment
+% Usage: \buptfigure[scale]{figure path}{caption}{label}
+\usepackage{graphicx} % graphic package
+\newcommand{\buptfigure}[4][width=11cm]{%
+\begin{figure}[!htbp]%
+    \begin{center}%
+        \includegraphics[#1]{#2}%
+    \end{center}%
+    \caption{#3}%
+    \label{#4}
+\end{figure}}
+
+% table tweaking
+% New table environment
+% Usage: \begin{bupttable}{caption}{label} 
+%            <normal table>
+%        \end{bupttable}
+\usepackage{multirow} % multirow 
+\newenvironment{bupttable}[2]{%
+\begin{table}[!htbp]%
+    \centering%
+    \renewcommand{\arraystretch}{1.38}%
+    \setlength{\abovecaptionskip}{0pt}%
+    \setlength{\belowcaptionskip}{10pt}%
+    \caption{#1}%
+    \label{#2}}{%
+\end{table}}%
+
+% equation tweaking
+\usepackage{amsmath,delarray,bm,mathtools}
+\newtagform{newtag}[]{式（}{）}
+\usetagform{newtag}
+
+% Theorem
+\newtheorem{definition}{定义}
+
+% Code
+\usepackage{listings}
+%\renewcommand{\ttdefault}{bch}
+\lstset{
+    basicstyle=\ttfamily\wuhao, %五号等宽字体
+    extendedchars=true,
+    keywordstyle=\color{blue},
+    commentstyle=\color{green!30!black}, 
+    showspaces=false,          % 显示空格
+    showstringspaces=true,    % 字符串中显示空格
+    showtabs=false,            % 显示 TAB
+    tabsize=2,                 % TAB 被当作两个空格
+    captionpos=b,              % 标题位置
+    breaklines=true,           % 自动断行
+    breakatwhitespace=true,   
+    basewidth={0.5em,0.35em},
+%    xleftmargin=.5em,
+%    xrightmargin=.5em,
+%    aboveskip=1ex,
+%    columns=flexible,        % 如果不指定等宽字体用这个
+%    mathescape,
+    escapeinside={\%*}{*)}
+}
