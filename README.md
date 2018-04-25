@@ -56,9 +56,12 @@ Windows + XeLaTeX
 2018/4/24
 
 # FAQ
--**Q：为什么我在TeXworks中编译，到“Require XeLaTeX”处就不动了？**
+- **Q：为什么我在TeXworks中编译，到“Require XeLaTeX”处就不动了？**
+
  A:正如编译提示所言，它需要XeLaTeX。请注意编辑器左上角是否选择“XeLaTeX”，默认状态下是pdfLaTeX。
--**Q:引用文献的BibTeX文件可以从哪里获取？**
+ 
+- **Q:引用文献的BibTeX文件可以从哪里获取？**
+
  A:几乎任何学术文献库都会提供BibTeX格式的引用数据，你可以使用**JabRef**来管理和自动生成你引用文献的BibTeX。但在引用量不大的情况下，直接去学术搜索引擎和数据库（Google Scholar/IEEEXplore/ACM digital library/Springer Link/必应学术/百度学术）或学术组织官网（CVF）去复制也不麻烦。
 
 # BTW
