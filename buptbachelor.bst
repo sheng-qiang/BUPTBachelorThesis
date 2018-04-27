@@ -978,8 +978,8 @@ FUNCTION {bib.type.designator} {
 	    { "C" }
 	    { type$ "patent" =
 		{ "P" }
-		{ type$ "phdthesis" = type$ "mastersthesis" = or
-		    { "D" }
+		{ type$ "phdthesis" = type$ "masterthesis" = or
+		    {language empty$ { "Dissertation" } { "学位论文" } if$}
 		    { type$ "techreport" = 
 			{ "R" }
 			{ type$ "article" = type$ "periodical" = or
@@ -2295,28 +2295,44 @@ FUNCTION {manual}
   fin.entry
 }
 
-% FUNCTION {masterthesis.type}
-% { "~[D]" 
-% % language empty$
-% %     { "[Master Thesis]" }
-% %     { "[硕士学位论文]" }
-% %   if$
-% }
+FUNCTION {thesis.type}
+{ 
+%"~[D]" 
+ language empty$
+     { "[Dissertation]" }
+     { "[学位论文]" }
+   if$
+}
 
-% FUNCTION {mastersthesis}
-% { start.entry
-%   format.authors "author" add.period$ output.warn
-%   new.block
-%   format.title remove.dots " " * masterthesis.type * output
-%   new.block
-%   format.address.school output
-%   %address output
-%   %school "school" output.warn  
-%   format.date "year" output.warn
-%   new.block
-%   note output
-%   fin.entry
-% }
+FUNCTION {masterthesis}
+ { start.entry
+   format.authors "author" add.period$ output.warn
+   new.block
+   format.title remove.dots " " * thesis.type * output
+   new.block
+   %format.address.school output
+   %address output
+   school "school" output.warn  
+   format.date "year" output.warn
+   new.block
+   %note output
+   fin.entry
+ }
+
+FUNCTION {phdthesis}
+ { start.entry
+   format.authors "author" add.period$ output.warn
+   new.block
+   format.title remove.dots " " * thesis.type * output
+   new.block
+   %format.address.school output
+   %address output
+   school "school" output.warn  
+   format.date "year" output.warn
+   new.block
+   %note output
+   fin.entry
+ }
 
 FUNCTION {misc}
 { start.entry
@@ -2336,16 +2352,6 @@ FUNCTION {misc}
   fin.entry
 %  empty.misc.check
 }
-
-FUNCTION {phdthesis.type}
-{ "~[D]" 
-% language empty$
-%     { "[PhD Thesis]" }
-%     { "[博士学位论文]" }
-%   if$ 
-}
-
-
 
 
 FUNCTION {unpublished}
@@ -2511,7 +2517,8 @@ FUNCTION {BUPTThesisBSTCTL}{
 %%%%%%%%%%%%
 %% 条目别名
 %%%%%%%%%%%%
-FUNCTION {mastersthesis} {phdthesis}
+%FUNCTION {phdthesis} {thesis}
+%FUNCTION {masterthesis} {thesis}
 FUNCTION {conference}    {inproceedings}
 FUNCTION {online}        {electronic}
 FUNCTION {internet}      {electronic}
