@@ -25,6 +25,7 @@
 \usepackage{xcolor}   % color
 \usepackage{xltxtra}  % print a XeLaTeX
 
+ 
 % Font family
 \setmainfont[Mapping=tex-text]{Times New Roman}
 
@@ -215,12 +216,20 @@ pdfborder=001, linkcolor=black, citecolor=black]{hyperref}
 \end{table}}%
 
 % equation tweaking
+\usepackage{amssymb}
+\usepackage{bm} % 加粗使用
 \usepackage{amsmath,delarray,bm,mathtools}
-\newtagform{newtag}[]{式（}{）}
+\newtagform{newtag}[]{式（}{）} %定义公式编号样式
 \usetagform{newtag}
 
 % Theorem
-\newtheorem{definition}{定义}
+\newtheorem{definition}{定义}[chapter]
+
+
+% Algorithm
+\usepackage{algorithm}  
+\usepackage{algorithmicx}  
+\usepackage{algpseudocode}
 
 % Code
 \usepackage{listings}
