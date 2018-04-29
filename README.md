@@ -14,17 +14,15 @@
 - 新增并调校“代码”框格式，附示例（指导手册无要求，根据实际需求编入）（4/29）
 - 为便于阅读学习，重编示例文本。（4/29）
 - 全面按照指导手册要求顺序，插入任务书、成绩评定表、开题报告、中期检查表的PDF。（4/29）
+- 修正原示例中使用\ref引用公式的错误，已改为\eqref。（4/29）
 
 # 系统需求
-Windows + XeLaTeX
+- Windows + XeLaTeX
+    建议直接安装TeX Live（其中已包含需要的XeLaTeX和BibTeX），同时安装TeXworks（安装过程中有勾选框，选中即可）
+    传送门：https://www.tug.org/texlive/（流量不多的同学可以到BYRBT去下载）
 
-建议直接安装TeX Live（其中已包含需要的XeLaTeX和BibTeX），同时安装TeXworks（安装过程中有勾选框，选中即可）
-
-传送门：https://www.tug.org/texlive/
-
-流量不多的同学可以到BYRBT去下载
-
-直接打开main.tex即可操作
+- Mac OS
+    理论可用，请尝试，欢迎成功者告知流程
 
 # 如何使用
 编辑以下文件
@@ -44,6 +42,8 @@ Windows + XeLaTeX
 - docs：将封面（cover）、诚信声明（statement）、外文文献原文（translation）、任务书（task）、成绩评定表（scoreTable）、开题报告（openingReport）和中期检查表（interimReport）的PDF放入该文件夹。为了保持清晰度，请在从Word输出PDF时尽可能选择**高质量**的设置（修正官方缺陷的封面及其他材料的word版已放入该文件夹，编辑并保存为PDF即可）
 
 官方相关模板请访问https://jwc.bupt.edu.cn/list/list.php?p=9_38_1
+
+在TeXworks中编译main.tex即可，main.pdf即最终输出。
 
 # 编译
 
@@ -73,6 +73,10 @@ Windows + XeLaTeX
 - **Q：为什么我在TeXworks中编译，到“Require XeLaTeX”处就不动了？**
 
     A:正如编译提示所言，它需要XeLaTeX。请注意编辑器左上角是否选择“XeLaTeX”，默认状态下是pdfLaTeX。
+
+- **Q：LaTeX语句书写有误，导致编译卡在一半怎么办？**
+
+    A:TeXworks中，本次编译可以通过在下方输入框敲击Enter以忽略错误完成，但有时错误无法忽略会导致本次输出PDF不成功。修正好错误后，到“文件”中选择“删除辅助文件”，然后再重新编译即可。
  
 - **Q:引用文献的BibTeX文件可以从哪里获取？**
 
