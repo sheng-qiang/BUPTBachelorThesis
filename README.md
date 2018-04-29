@@ -18,8 +18,10 @@
 
 # 系统需求
 - Windows + XeLaTeX
+
     建议直接安装TeX Live（其中已包含需要的XeLaTeX和BibTeX），同时安装TeXworks（安装过程中有勾选框，选中即可）
-    传送门：https://www.tug.org/texlive/（流量不多的同学可以到BYRBT去下载）
+    
+    传送门：https://www.tug.org/texlive/    （流量不多的同学可以到BYRBT去下载）
 
 - Mac OS
     理论可用，请尝试，欢迎成功者告知流程
