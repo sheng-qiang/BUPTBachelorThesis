@@ -20,10 +20,20 @@
 %%%%%%%%%%%%%%%%%%%%%%%%% Begin Documents %%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
 
-\includepdf{docs/cover.pdf}  
+% 封面
+\includepdf[pages=-]{docs/cover.pdf}  
 \newpage
 
-\includepdf{docs/statement.pdf} 
+% 任务书
+\includepdf[pages=-]{docs/task.pdf}  
+\newpage
+
+% 成绩评定表
+\includepdf[pages=-]{docs/scoreTable.pdf}  
+\newpage
+
+% 诚信声明
+\includepdf[pages=-]{docs/statement.pdf} 
 \newpage
 
 \input{main.cfg}    % Main items 
@@ -39,41 +49,27 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%% Main Area %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\chapter{引言}
-\section{研究背景及意义}
-\subsection{社交媒体发展现状}
-社交媒体是一种供用户创建在线社群来分享信息、观点、个人信息和其它内容（如视频）的电子化交流平台，社交网络服务（social network service, SNS）和微博客（microblogging）都属于社交媒体的范畴\cite{webster_social_media}，国外较为知名的有Facebook\footnote{http://www.facebook.com/}、Instagram\footnote{https://www.instagram.com/}、Twitter\footnote{http://www.twitter.com/}、LinkedIn\footnote{http://www.linkedin.com/}等，国内较为知名的有新浪微博\footnote{http://www.weibo.com/}。社交媒体营销公司We Are Social的《2018数字报告》\cite{digital_in_2018}显示，截至2018年1月，全球的活跃社交媒体用户已达到31.96亿，同比增长13\%，全人口渗透率达到42\%。其中，知名SNS服务商Facebook月活跃用户数高达21.67亿，微博客服务商Twitter月活跃用户数达到3.3亿，新浪微博月活跃用户数达到3.76亿。可以说，社交媒体已经成为了互联网用户的必需品之一。
+\chapter{基础模块示例}
+\section{特殊文本类型}
+\subsection{脚注}
+社交媒体是一种供用户创建在线社群来分享信息、观点、个人信息和其它内容（如视频）的电子化交流平台，社交网络服务（social network service, SNS）和微博客（microblogging）都属于社交媒体的范畴\cite{webster_social_media}，国外较为知名的有Facebook\footnote{http://www.facebook.com/}、Instagram\footnote{https://www.instagram.com/}、Twitter\footnote{http://www.twitter.com/}、LinkedIn\footnote{http://www.linkedin.com/}等，国内较为知名的有新浪微博\footnote{http://www.weibo.com/}。
 
 在社交媒体的强覆盖下，新闻信息的传播渠道也悄然了发生变化。
 
+\subsection{定义}
 \begin{definition}
 社交媒体新闻是指社交媒体平台的用户通过网络自发进行创作，并在平台上进行共享传播的文字、语音、视频等信息，是用户生成内容（UGC）的一种。\cite{周兴2017基于深度学习的谣言检测及模式挖掘}
 \end{definition}
 
+\subsection{中英文文献、学位论文引用}
 根据美国皮尤研究中心的2017年9月发布的调查结果\cite{pew_news_use_2017}，67\%的美国民众会从社交媒体上获取新闻信息，其中高使用频率用户占20\%。在国内，中国互联网信息中心《2016年中国互联网新闻市场研究报告》\cite{internet_news_2016}也显示，社交媒体已逐渐成为新闻获取、评论、转发、跳转的重要渠道，在2016年下半年，曾经通过社交媒体获取过新闻资讯的用户比例高达90.7\%，在微信、微博等社交媒体参与新闻评论的比例分别为62.8\%和50.2\%。社交媒体正在成为网络上热门事件生成并发酵的源头，在形成传播影响力后带动传统媒体跟进报道，最终形成更大规模的舆论浪潮。
 
-然而，社交媒体在改变用户获取新闻途径，加速信息传播分发的同时，也为虚假信息的传播提供了有利环境。2016年美国大选后，Facebook爆出“假新闻事件”\footnote{https://www.recode.net/2017/4/28/15476142/facebook-report-trump-clinton-russia-us-presidential-election}，其被指控在Facebook平台上传播的假新闻严重影响了美国大选结果。2018年3月，《Science》发表了麻省理工学院学者针对真假新闻传播情况的研究\cite{false_news_spread_2018}。研究发现，在Twitter平台上，包含虚假新闻的推文更容易被转发，且更容易形成“病毒式传播”，真实消息传播至1500人的时间，比虚假消息长6倍。而在国内，新浪微博由于其发布方便、传播迅速、受众广泛且总量大的特点，成为了虚假信息传播的重灾区：《中国新媒体发展报告（2013）》\cite{唐绪军2013中国新媒体发展报告}显示，2012年的100件微博热点舆情案例中，有超过1/3出现谣言；《中国新媒体发展报告（2015）》\cite{唐绪军2015中国新媒体发展报告}对2014年传播较广、比较典型的92条假新闻进行了多维度分析，发现有59\%的虚假新闻首发于新浪微博。
+在国内，新浪微博由于其发布方便、传播迅速、受众广泛且总量大的特点，成为了虚假信息传播的重灾区：《中国新媒体发展报告（2013）》\cite{唐绪军2013中国新媒体发展报告}显示，2012年的100件微博热点舆情案例中，有超过1/3出现谣言；《中国新媒体发展报告（2015）》\cite{唐绪军2015中国新媒体发展报告}对2014年传播较广、比较典型的92条假新闻进行了多维度分析，发现有59\%的虚假新闻首发于新浪微博。
 
 此等信息的传播严重损害了有关公众人物的名誉权，降低了社交媒体服务商的商业美誉度，扰乱了网络空间秩序，冲击着网民的认知，极易对民众造成误导，带来诸多麻烦和经济损失，甚至会导致社会秩序的混乱。针对社交媒体谣言采取行动成为了有关部门、服务提供商和广大民众的共同选择。\cite{周兴2017基于深度学习的谣言检测及模式挖掘}
 
-\section{国内外研究现状}
-本节将与下文有关的关键知识点的研究现状进行概述。
-\subsection{文本的表示方法}
-传统的文本挖掘通常会使用字符匹配、词典比对、知识库搜索等手段和工具，但它们难以起到学习并挖掘抽象的语义联系的作用，难以满足自然语言处理（Natural Language Processing, NLP）任务的需求。为了把文字内容纳入可计算、可度量的范围中来，学者对文字内容进行了编码，对每个词语进行向量化表示，以便作为机器学习任务的输入。其中最著名的是独热表示（One-Hot Represetation）和一种分布式表示模型——Word2Vec。
-
-\textbf{独热表示}
-
-该方法首先需要统计表示范围内所有词的数量$N$，然后给这$N$个词分别编号为$1,2,\ldots,N$，最终使用一个仅第$k$维非0（通常为1）的$N$维向量来表示编号为$k$的词。例如，在词语空间$\Omega=\{\mbox{中国}, \mbox{首都}, \mbox{北京}\}$中，“中国”的独热编码为$[1,0,0]$，“首都”的独热编码为$[0,1,0]$，“北京”的独热编码为$[0,0,1]$。从计算机存储的角度上讲，其结构就是一个Hash表，再与最大熵、条件随机场（Conditional Random Field，CRF）、支持向量机（Support Vector Machine， SVM）等算法相配合，可以解决大多数自然语言处理的基础任务。
-
-显然，这种表示方式的优势在于操作简单，表示简洁，但其缺陷不容忽视：首先需要表示的所有词数量越多，则表示向量就越长，在实际计算中存在严重的稀疏问题，无法像音频、图像等数据获取稠密表示，形成“维数灾难”（Curse of Dimensionality）\cite{Bengio2006A}；更为关键的是，独热表示仅仅将词语离散符号化，不能表达词与词之间的关系，从而丢失了许多语义信息。
-
-此外，这种表示方法也经常用于其它取值空间不大的非数值数据的表示上。
-
-\textbf{分布式表示——Word2Vec}
-
-词的分布式表示（Distributed Representation）最早由“神经网络之父”Geoffrey Hinton于1986年提出\cite{Hinton1986Learning}，其基本思想是通过训练将每个词表示为$K$维实值短向量（这里的“短”是相对于独热编码而言的），并通过词嵌入（Word Embedding）在向量空间中的距离来表征词语之间的语义相似度。其之所以被称为“分布式”表示，核心在于一个词的$K$个维度中，每一个都承载着一部分词语的抽象语义信息。然而，其在实际应用上算法复杂度过高，故一直没有被广泛地采用。
-
-直到2013年，谷歌提出了著名的词嵌入学习模型Word2Vec\cite{mikolov2013distributed}，解决了效率问题。自此词语的分布式表示几乎成为了所有自然语言处理任务的标准预处理方法。为了表达表格的用法，下面插入一个跟这段话没有关系的表格。
+\section{图表及其引用}
+此处引用了表\ref{crowdwisdom}。
 
 \begin{bupttable}{基于浏览者行为的特征}{crowdwisdom}
     \begin{tabular}{l|l|l}
@@ -85,10 +81,15 @@
     \end{tabular}
 \end{bupttable}
 
-\section{模型描述}
+此处引用了一张图。图\ref{autoencoder}表示的是一个由含有4个神经元的输入层、含有3个神经元的隐藏层和含有4个神经元的输出层组成的自编码器，$+1$代表偏置项。
 
-\subsection{基于主成分分析}
-在Weiling Chen\cite{Chen2016Behavior}和Yan Zhang\cite{Yan2017OneHot}的工作中，均使用了主成分分析（Principle Component Analysis,  PCA）作为基本的数据降维方法。下面对主成分分析进行介绍。
+\buptfigure{pictures/autoencoder}{自编码器结构}{autoencoder}
+
+
+\section{公式与算法表示}
+
+\subsection{例子：基于主成分分析}
+下面对主成分分析进行介绍。
 
 主成分分析是一种简单的机器学习算法，其功能可以从两方面解释：一方面可以认为它提供了一种压缩数据的方式，另一方面也可以认为它是一种学习数据表示的无监督学习算法。\cite{Goodfellow2016DeepLearning}
 通过PCA，我们可以得到一个恰当的超平面及一个投影矩阵，通过投影矩阵，样本点将被投影在这一超平面上，且满足最大可分性（投影后样本点的方差最大化），直观上讲，也就是能尽可能分开。
@@ -168,59 +169,14 @@
 	\end{algorithmic}
 \end{algorithm}
 
-在该工作中，取主成分数$n$为5，$k$为50。
+\section{代码表示}
+下面的代码\ref{plus}是用Python编写的加法函数。
 
-\subsection{基于欠完备自编码器}
-在Mayu  Sakurada的论文\cite{Sakurada2014Anomaly}中，学者使用了自编码器进行异常检测来进行非线性降维。考虑到，PCA和TSVD均停留在线性降维的范畴中，而社交媒体信息的可信度评估问题被认为是极为复杂的非线性问题，Yan Zhang在另一篇工作\cite{Yan2017Autoencoder}中，将历史信息中特征的提取方法由主成分分析变为了欠完备自编码器（undercomplete autoencoder, UAE），得到了基于欠完备自编码器的可信度评估模型。下面介绍自编码器的相关知识。
+\begin{lstlisting}[language=Python, caption=加法, label=plus, tabsize=2]  
+def plus_func(a,b):
+	return a+b
+\end{lstlisting}  
 
-自编码器（autoencoder, AE）的概念最早源自Rumelhart等人于1986年发表在《Nature》上的文章《Learning representations by back-propagating errors》\cite{Rumerlhar1986Learning}。自编码器是神经网络的一种，经过训练后能尝试将输入复制到输出。\cite{Goodfellow2016DeepLearning}自编码器的结构如图\ref{autoencoder}所示。
-
-\buptfigure{pictures/autoencoder}{自编码器结构}{autoencoder}
-
-自编码器内部有一个隐藏层（hidden layer）$\bm{h}$，可以产生用于表示输入数据的编码（code）。如果输入层（input layer）的输出数据为$\bm{x}$，输出层(output layer）的输出结果为$\hat{\bm{x}}$，那么输入层、隐藏层和输出层有如下函数关系：
-\begin{equation}
-\bm{h}=g_1(\bm{W}\bm{x}+\bm{b}_1)
-\end{equation}
-\begin{equation}
-\hat{\bm{x}}=g_2(\bm{V}\bm{h}+\bm{b}_2)
-\end{equation}
-其中，$\bm{b}_1$和$\bm{b}_2$是偏置项，$g_1$和$g_2$分别是输入层到隐藏层和隐藏层到输出层间的激活函数（activation function），正是由于激活函数$f$和$g$的存在，层与层之间的映射才是非线性的。
-
-由上可知，图\ref{autoencoder}表示的是一个由含有4个神经元的输入层、含有3个神经元的隐藏层和含有4个神经元的输出层组成的自编码器，$+1$代表偏置项。
-
-自编码器分为多种，其中最经典的结构正如\ref{autoencoder}所示，其特点是隐藏层单元数小于输入输出层，Ian Goodfellow在《深度学习》\cite{Goodfellow2016DeepLearning}一书中将这种自编码器称为欠完备自编码器（undercomplete autoencoder）。欠完备自编码器的特点，使其可以\textbf{迫使}隐藏层用小于原始数据的维数来尽可能表示原数据，以期在输出层尽可能将原始数据重构。那么，隐藏层的表示实际上就是一种\textbf{有损压缩编码}的结果，那么由输入层到隐藏层的部分，就可以被看做一个有损的编码器（encoder），而隐藏层到输出层的部分，自然就是解码器（decoder）。
-
-进一步，对于压缩表示这种任务，自编码器的损失函数理应表征输入与输出之间的差别，容易想到使用均方误差（Mean Square Error，MSE）：
-\begin{equation}
-\begin{aligned}
-Loss &= MSE(\bm{X},\hat{\bm{X}}) \\
-         &= \frac{1}{nm}\sum_{i=1}^{n} \sum_{j=1}^{m} (x_{ij} -\hat{x}_{ij})^2 \\
-\end{aligned}
-\end{equation}
-其中，$\bm{X}=\{\bm{x}_1,\bm{x}_2,\ldots,\bm{x}_n\}$是输入数据，$\hat{\bm{X}}=\{\hat{\bm{x}}_1,\hat{\bm{x}}_2,\ldots,\hat{\bm{x}}_n\}$是输出数据，假设输入向量和输出向量都有m维，即$\bm{x}_i = (x_{i1},x_{i2},\ldots,x_{im})$，$\hat{\bm{x}}_i = (\hat{x}_{i1},\hat{x}_{i2},\ldots,\hat{x}_{im})$，$i = 1,2,\ldots,n$。
-
-如果欠完备自编码器只针对一条原始数据进行编码表示，其应当尽可能拟合该数据的特征；而如果针对一批数据，其训练学习的结果应当是拟合所有数据中最有共性的部分，以期降低损失。基于这种认识，仿照基于PCA和基于TSVD方法的思路，我们就可以基于UAE的社交媒体信息可信度评估模型。其算法描述如\ref{UAE_model}所示（沿用基于PCA的评估算法中的符号）。
-
-\begin{algorithm} 
-\floatname{algorithm}{算法}
-\caption{基于UAE的信息可信度评估} 
-\label{UAE_model}
-\renewcommand{\algorithmicrequire}{\textbf{输入：}}
-\renewcommand{\algorithmicensure}{\textbf{输出：}} 
-	\begin{algorithmic}[1] 
-	\Require $\bm{f}^{c}_{0}$，$\bm{F}^{c}_{W}$
-	\Ensure 标签$label\in \{0,1\}$
-	\State 用$\bm{F}^{c}_{W}$中的经典特征向量，基于反向传播，训练自编码器网络
-	\State  使$\bm{f}^{c}_{0}$通过训练好的网络，得到输入输出之间的方差损失$l_0$
-	\State  使$\bm{F}^{c}_{W}$中的经典特征向量，通过训练好的网络，得到各自的损失，并求得其均值$\mu$和标准差$\sigma$
-	\State 计算阈值$thr = {\mu} + {\sigma}$
-	\If {$l_0 > thr$}
-		\State $ label \gets 1 $
-	\Else
-		\State $ label \gets 0 $
-	\EndIf
-	\end{algorithmic}
-\end{algorithm}
 
 %%%%%%%%%%%%%%%%%%%%%%% Main Area ENDs Here %%%%%%%%%%%%%%%%%%%%%%%%
 %\let\cleardoublepage=\cleardoublepagebak
@@ -295,5 +251,13 @@ Loss &= MSE(\bm{X},\hat{\bm{X}}) \\
 \includepdf[pages=1, scale=0.95, pagecommand=\heiti\sanhao{外\quad{}文\quad{}原\quad{}文}]{docs/translation.pdf}
 \includepdf[pages=2-, scale=0.95, pagecommand={}]{docs/translation.pdf}
 \end{center}
+
+% 开题报告
+\includepdf[pages=-]{docs/openingReport.pdf} 
+
+
+% 中期检查表
+\includepdf[pages=-]{docs/interimReport.pdf} 
+
 
 \end{document}

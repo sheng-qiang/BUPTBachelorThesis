@@ -231,9 +231,9 @@ pdfborder=001, linkcolor=black, citecolor=black]{hyperref}
 \usepackage{algorithmicx}  
 \usepackage{algpseudocode}
 
-% Code
+% Code 
 \usepackage{listings}
-%\renewcommand{\ttdefault}{bch}
+\renewcommand{\lstlistingname}{\kaishu{代码}}
 \lstset{
     basicstyle=\ttfamily\wuhao, %五号等宽字体
     extendedchars=true,
@@ -243,10 +243,12 @@ pdfborder=001, linkcolor=black, citecolor=black]{hyperref}
     showstringspaces=true,    % 字符串中显示空格
     showtabs=false,            % 显示 TAB
     tabsize=2,                 % TAB 被当作两个空格
-    captionpos=b,              % 标题位置
+    captionpos=t,              % 标题位置
     breaklines=true,           % 自动断行
     breakatwhitespace=true,   
     basewidth={0.5em,0.35em},
+    frame=single,              %单线边框，注释掉则无边框
+    numbers=left,               %行号位于左侧
 %    xleftmargin=.5em,
 %    xrightmargin=.5em,
 %    aboveskip=1ex,
@@ -254,3 +256,4 @@ pdfborder=001, linkcolor=black, citecolor=black]{hyperref}
 %    mathescape,
     escapeinside={\%*}{*)}
 }
+
