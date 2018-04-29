@@ -979,7 +979,7 @@ FUNCTION {bib.type.designator} {
 	    { type$ "patent" =
 		{ "P" }
 		{ type$ "phdthesis" = type$ "masterthesis" = or
-		    {language empty$ { "Dissertation" } { "学位论文" } if$}
+		    {language "Chinese" = { "学位论文" } { language empty$ = {"Dissertation"}  if$} if$}
 		    { type$ "techreport" = 
 			{ "R" }
 			{ type$ "article" = type$ "periodical" = or
@@ -2319,20 +2319,20 @@ FUNCTION {masterthesis}
    fin.entry
  }
 
-FUNCTION {phdthesis}
- { start.entry
-   format.authors "author" add.period$ output.warn
-   new.block
-   format.title remove.dots " " * thesis.type * output
-   new.block
+%FUNCTION {phdthesis}
+ %{ start.entry
+  % format.authors "author" add.period$ output.warn
+   %new.block
+   %format.title remove.dots " " * thesis.type * output
+   %new.block
    %format.address.school output
-   %address output
-   school "school" output.warn  
-   format.date "year" output.warn
-   new.block
-   %note output
-   fin.entry
- }
+   %%address output
+   %school "school" output.warn  
+   %format.date "year" output.warn
+   %new.block
+   %%note output
+   %fin.entry
+ %}
 
 FUNCTION {misc}
 { start.entry
