@@ -1,8 +1,8 @@
-﻿# 北京邮电大学本科学位论文模板
-* 作者：Caspar Zhang <casparant@gmail.com>
-* 修改：Bing Hsu <hello@antinucleon.com>
-* 修改：Guohua Wu <ghmeta@163.com>
-* 修改：Qiang Sheng<sqyx008@outlook.com>
+﻿# 北京邮电大学本科学士学位论文模板（本科毕业设计模板）
+* 作者：Caspar Zhang    <casparant@gmail.com>
+* 修改：Bing Hsu        <hello@antinucleon.com>
+* 修改：Guohua Wu       <ghmeta@163.com>
+* 修改：Qiang Sheng     <sqyx008@outlook.com>
 
 # 主要修改
 - 加入外文译文和原文板块（4/24）
@@ -16,16 +16,22 @@
 - 全面按照指导手册要求顺序，插入任务书、成绩评定表、开题报告、中期检查表的PDF。（4/29）
 - 修正原示例中使用\ref引用公式的错误，已改为\eqref。（4/29）
 - 修正英文学位论文引用形式的BUG。（4/29）
+- 示例文本中新增“列表”示例。（5/2）
 
 # 系统需求
-- Windows + XeLaTeX
+- Windows
 
     建议直接安装TeX Live（其中已包含需要的XeLaTeX和BibTeX），同时安装TeXworks（安装过程中有勾选框，选中即可）
     
     传送门：https://www.tug.org/texlive/    （流量不多的同学可以到BYRBT去下载）
 
-- Mac OS
-    理论可用，请尝试，欢迎成功者告知流程
+- Mac OS 
+
+    建议直接安装MacTeX，编辑器可以使用MacTeX自带的TeXshop，也可以使用TeXpad等其它选择
+
+    传送门：http://www.tug.org/mactex/    （流量不多的同学可以到BYRBT去下载）
+
+    （<a href="https://github.com/MrAdonis">Li Jiarong</a>提供）
 
 # 如何使用
 编辑以下文件
@@ -44,7 +50,7 @@
 
 - docs：将封面（cover）、诚信声明（statement）、外文文献原文（translation）、任务书（task）、成绩评定表（scoreTable）、开题报告（openingReport）和中期检查表（interimReport）的PDF放入该文件夹。为了保持清晰度，请在从Word输出PDF时尽可能选择**高质量**的设置（修正官方缺陷的封面及其他材料的word版已放入该文件夹，编辑并保存为PDF即可）
 
-官方相关模板请访问https://jwc.bupt.edu.cn/list/list.php?p=9_38_1
+教务处官方相关模板请访问https://jwc.bupt.edu.cn/list/list.php?p=9_38_1
 
 在TeXworks中编译main.tex即可，main.pdf即最终输出。
 
