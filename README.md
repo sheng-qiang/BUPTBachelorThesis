@@ -22,7 +22,7 @@
 # 系统需求
 - Windows
 
-    建议直接安装TeX Live（其中已包含需要的XeLaTeX和BibTeX），同时安装TeXworks（安装过程中有勾选框，选中即可）
+    建议直接安装TeX Live（其中已包含需要的XeLaTeX和BibTeX），同时安装TeXworks（安装过程中有勾选框，选中即可）。你也可以使用自己喜爱的编辑器，如使用**VS Code + LaTeX workshop**这样的组合也很舒服。
     
     传送门：https://www.tug.org/texlive/    （流量不多的同学可以到BYRBT去下载）
 
