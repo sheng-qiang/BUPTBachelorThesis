@@ -18,11 +18,13 @@
 - 修正英文学位论文引用形式的BUG（4/29）
 - 示例文本中新增“列表”示例（5/2）
 - 迁移示例文本中大部分\usepackages至.sty文件中（5/2）
+- 将任务书文档（task.*）更新至新版本（5/8）
+- 启用AutoFakeBold以应对Windows自带黑体无style=Bold的情况（5/8）（感谢<a href="https://github.com/RicardoMing">RicardoMing</a>）
 
 # 系统需求
 - Windows
 
-    建议直接安装TeX Live（其中已包含需要的XeLaTeX和BibTeX），同时安装TeXworks（安装过程中有勾选框，选中即可）。你也可以使用自己喜爱的编辑器，如使用**VS Code + LaTeX workshop**这样的组合也很舒服。
+    建议直接安装TeX Live（其中已包含需要的XeLaTeX和BibTeX），同时安装TeXworks（安装过程中有勾选框，选中即可）。你也可以使用“TeX Live + 自己喜爱的编辑器 + 扩展”的方式，如使用**TeX Live + VS Code + LaTeX workshop**或**TeX Live + Atom + language-latex + latex + pdf-view**。
     
     传送门：https://www.tug.org/texlive/    （流量不多的同学可以到BYRBT去下载）
 
