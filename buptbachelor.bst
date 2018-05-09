@@ -1302,23 +1302,48 @@ FUNCTION {format.year.volume.number} {
 %   %% END OF DEBUG
 }
 
-%
-FUNCTION {format.date}
-{ year empty$
-    { month empty$
-	{ "" }
-	{ "there's a month but no year in " cite$ * warning$
-	  month
-	}
+% 卷（期）.年,月(for article only)
+FUNCTION {format.volume.number.year.month} {
+  add.period$
+  year empty$
+    { "" }
+    {
+      volume empty$
+        'skip$
+        { "~" * volume * }
       if$
-    }
-    { month empty$
-	{ year }
-	{ month bbl.comma * year * }
+      number empty$
+        'skip$
+        { "~(" * number * ")" * }
+      if$
+      new.block
+      year
+      month empty$
+        'skip$
+        { bbl.comma * month * }
       if$
     }
   if$
 }
+
+%
+FUNCTION {format.date}
+{ year empty$
+    { month empty$
+      { "" }
+      { "there's a month but no year in " cite$ * warning$
+        month
+      }
+      if$
+    }
+    { month empty$
+      { year }
+      { month bbl.comma * year * }
+      if$
+    }
+  if$
+}
+
 function {format.year.year}
 { year empty$
     'skip$
@@ -1493,8 +1518,8 @@ FUNCTION {format.pages}
     { "" }
     { before.pages 'output.state :=
       pages multi.page.check
-	{ "" pages n.dashify tie.or.space.connect }
-	{ "" pages tie.or.space.connect }
+      { "" pages n.dashify tie.or.space.connect }
+      { "" pages tie.or.space.connect }
       if$
     }
   if$
@@ -1902,10 +1927,11 @@ FUNCTION {format.note} {
   note empty$
     { new.block "" }
     { url empty$
-	{ new.block }
-	{ before.all 'output.state := }
+      { new.block }
+      { before.all 'output.state := }
       if$
-      note }
+      note 
+    }
   if$
 }
 
@@ -2160,7 +2186,8 @@ FUNCTION {article}
   format.authors "author" output.warn
   format.book.title "title" output.warn
   format.journal.title "journal" output.warn
-  format.year.volume.number output
+  format.volume.number.year.month output
+  %format.year.volume.number output
   format.pages "pages" output.warn
   format.reference.date output
   format.url output
