@@ -46,7 +46,7 @@
 \newcommand{\xiaoliuhao}{\zihao{-6}}
 \newcommand{\qihao}{\zihao{7}}
 \newcommand{\bahao}{\zihao{8}}
-% Normal font size is SiHao
+% Normal font size is XiaosiHao
 \renewcommand{\normalsize}{\xiaosihao\songti\normalfont}
 
 % Serveral Font pre-setting
@@ -101,7 +101,7 @@ bookmarksnumbered=true, bookmarksopen=true, colorlinks=true,
 pdfborder=001, linkcolor=black, citecolor=black]{hyperref}
 
 % Line spread
-\renewcommand{\baselinestretch}{1.2}
+\renewcommand{\baselinestretch}{1.3}
 % \setlength{\itemsep}{-5pt} % item seperate too wide
 
 % Indentation
@@ -126,14 +126,14 @@ pdfborder=001, linkcolor=black, citecolor=black]{hyperref}
 % Content style
 \usepackage{titletoc}
 \renewcommand\contentsname{\centerline{\toctitlefont{目\qquad{}录}}}
-\titlecontents{chapter}[0em]{\tocchapterfont}
+\titlecontents{chapter}[0em]{\tocchapterfont\vspace{0.4mm}}
     {\CTEXnumber{\CJKsection}{\thecontentslabel}{第\CJKsection{章}\quad{}}}
     {}
     {\hspace{.5em}\titlerule*[10pt]{$\cdot$}\contentspage}
-\titlecontents{section}[2em]{\tocsectionfont}{%
+\titlecontents{section}[2em]{\tocsectionfont\vspace{0.4mm}}{%
     \thecontentslabel\quad{}}{}{%
     \hspace{.5em}\titlerule*[10pt]{$\cdot$}\contentspage}%
-\titlecontents{subsection}[3em]{\tocsubsectionfont}{%
+\titlecontents{subsection}[3em]{\tocsubsectionfont\vspace{0.4mm}}{%
     \thecontentslabel\quad{}}{}{%
     \hspace{.5em}\titlerule*[10pt]{$\cdot$}\contentspage}%
 \makeatletter % Content Page style

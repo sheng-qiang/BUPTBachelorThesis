@@ -21,11 +21,12 @@
 - 将任务书文档（task.*）更新至新版本（5/8）
 - 启用AutoFakeBold以应对Windows自带黑体无style=Bold的情况（5/8）（感谢<a href="https://github.com/RicardoMing">RicardoMing</a>）
 - 修正引用中“@article”类型的格式问题（5/9）
+- 对照Word版本设置正文行间距（Word版的1.2倍）和目录行间距（20磅）至目测一致（5/13）
 
 # 系统需求
 - Windows
 
-    建议直接安装TeX Live（其中已包含需要的XeLaTeX和BibTeX），同时安装TeXworks（安装过程中有勾选框，选中即可）。你也可以使用“TeX Live + 自己喜爱的编辑器 + 扩展”的方式，如使用**TeX Live + VS Code + LaTeX workshop**或**TeX Live + Atom + language-latex + latex + pdf-view**。
+    建议直接安装TeX Live（其中已包含需要的XeLaTeX和BibTeX），同时安装TeXworks（安装过程中有勾选框，选中即可）。你也可以使用“TeX Live + 自己喜爱的编辑器 + 扩展”的方式，如使用**TeX Live + Visual Studio Code + LaTeX workshop**或**TeX Live + Atom + language-latex + latex + pdf-view**。
     
     传送门：https://www.tug.org/texlive/    （流量不多的同学可以到BYRBT去下载）
 
@@ -100,7 +101,9 @@
     A:几乎任何学术文献库都会提供BibTeX格式的引用数据，你可以使用**JabRef**来管理和自动生成你引用文献的BibTeX。但在引用量不大的情况下，直接去学术搜索引擎和数据库（Google Scholar/IEEEXplore/ACM digital library/Springer Link/必应学术/百度学术）或学术组织官网（CVF）去复制也不麻烦。
 
 # BTW
-欢迎提出issue，更欢迎提pull request
+北邮人论坛帖子：https://bbs.byr.cn/#!article/Paper/30043，欢迎大家去顶帖。
+
+欢迎提出issue，更欢迎提pull request，**关于模板的问题请使用Issue功能提出，其它途径无法得到答复保证**。
 
 欢迎广而告之，欢迎在word调格式被折磨时投奔初期有一点学习（模仿）成本的LaTeX模板
 
