@@ -101,7 +101,7 @@
     A:几乎任何学术文献库都会提供BibTeX格式的引用数据，你可以使用**JabRef**来管理和自动生成你引用文献的BibTeX。但在引用量不大的情况下，直接去学术搜索引擎和数据库（Google Scholar/IEEEXplore/ACM digital library/Springer Link/必应学术/百度学术）或学术组织官网（CVF）去复制也不麻烦。
 
 # BTW
-北邮人论坛帖子：https://bbs.byr.cn/#!article/Paper/30043，欢迎大家去顶帖。
+欢迎大家去顶在北邮人论坛推广本项目的帖子：https://bbs.byr.cn/#!article/Paper/30043
 
 欢迎提出issue，更欢迎提pull request，**关于模板的问题请使用Issue功能提出，其它途径无法得到答复保证**。
 
