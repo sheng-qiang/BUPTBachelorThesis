@@ -222,9 +222,17 @@ pdfborder=001, linkcolor=black, citecolor=black]{hyperref}
 \newtagform{newtag}[]{式（}{）} %定义公式编号样式
 \usetagform{newtag}
 
-% Theorem
-\newtheorem{definition}{定义}[chapter]
 
+% Theorem & definition
+
+
+\usepackage{amsthm}
+\newtheorem{definition}{定义}[chapter]
+\newtheorem{theorem}{定理}[chapter]
+\newtheorem{axiom}{公理}[chapter]
+\newtheorem{lemma}{引理}[chapter]
+\newtheorem{proposition}{命题}[chapter] 
+\newtheorem{corollary}{推论}[chapter]
 
 % Algorithm
 \usepackage{algorithm}  

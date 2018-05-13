@@ -45,10 +45,30 @@
 
 在社交媒体的强覆盖下，新闻信息的传播渠道也悄然了发生变化。\cite{false_news_spread_2018}
 
-\subsection{定义}
+\subsection{定义、定理与引理等}
 \begin{definition}
-社交媒体新闻是指社交媒体平台的用户通过网络自发进行创作，并在平台上进行共享传播的文字、语音、视频等信息，是用户生成内容（UGC）的一种。\cite{周兴2017基于深度学习的谣言检测及模式挖掘}
+这是一条我也不知道在说什么的定义。\cite{周兴2017基于深度学习的谣言检测及模式挖掘}
 \end{definition}
+
+\begin{theorem}
+这是一条我也不知道在说什么的定理。
+\end{theorem}
+
+\begin{axiom}
+这是一条我也不知道在说什么的公理。
+\end{axiom}
+
+\begin{lemma}
+这是一条我也不知道在说什么的引理。
+\end{lemma}
+
+\begin{proposition}
+这是一条我也不知道在说什么的命题。
+\end{proposition}
+
+\begin{corollary}
+这是一条我也不知道在说什么的推论。
+\end{corollary}
 
 \subsection{中英文文献、学位论文引用}
 根据美国皮尤研究中心的2017年9月发布的调查结果\cite{pew_news_use_2017}，67\%的美国民众会从社交媒体上获取新闻信息，其中高使用频率用户占20\%。在国内，中国互联网信息中心《2016年中国互联网新闻市场研究报告》\cite{internet_news_2016}也显示，社交媒体已逐渐成为新闻获取、评论、转发、跳转的重要渠道，在2016年下半年，曾经通过社交媒体获取过新闻资讯的用户比例高达90.7\%，在微信、微博等社交媒体参与新闻评论的比例分别为62.8\%和50.2\%。社交媒体正在成为网络上热门事件生成并发酵的源头，在形成传播影响力后带动传统媒体跟进报道，最终形成更大规模的舆论浪潮。
@@ -133,10 +153,6 @@
 \end{algorithmic}  
 \end{algorithm}
 
-论文\cite{Chen2016Behavior}认为，通过PCA保留一定的主成分，可以更好地把握历史微博的共性，使历史上的非谣言微博与谣言微博产生可度量的距离。
-
-论文采取了排序的检测方式：如果待判别的微博在特征空间中距离非谣言微博数据的“重心”比任何非谣言微博都要远，即成为了离群点，则认为该微博是一条谣言。但考虑到实验过程中应尽量统一化比较手段，在本节中，我们采用了Yan Zhang论文\cite{Yan2017OneHot}中的阈值法来进行判别：在特征空间中，如果待判定微博没有阈值范围内的相邻点，则认为该微博是一条谣言。
-
 记待判定微博$\bm{w}_0$的经典特征向量为$\bm{f}^{c}_{0}$，它的发布者在$\bm{w_0}$前发布的$k$条微博为$\bm{W} = \bm{w}_1,\bm{w}_2,\ldots,\bm{w}_k$，这$k$条微博对应的经典特征向量集为$\bm{F}^{c}_{W} = \{ \bm{f}^{c}_{1},\bm{f}^{c}_{2},\ldots,\bm{f}^{c}_{k} \}$。令$label = 1$代表谣言，$label = 0$代表非谣言。算法的具体流程如算法\ref{PCA_model}所示。
 
 \begin{algorithm} 
@@ -163,8 +179,8 @@
 下面的代码\ref{plus}是用Python编写的加法函数。
 
 \begin{lstlisting}[language=Python, caption=加法, label=plus, tabsize=2]  
-def plus_func(a,b):
-	return a+b
+def plus_func(a, b):
+	return a + b
 \end{lstlisting}  
 
 \section{列表样式}

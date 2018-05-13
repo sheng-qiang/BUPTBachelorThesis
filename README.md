@@ -22,6 +22,7 @@
 - 启用AutoFakeBold以应对Windows自带黑体无style=Bold的情况（5/8）（感谢<a href="https://github.com/RicardoMing">RicardoMing</a>）
 - 修正引用中“@article”类型的格式问题（5/9）
 - 对照Word版本设置正文行间距（Word版的1.2倍）和目录行间距（20磅）至目测一致（5/13）
+- 新增定理、引理、公理、推论、推论环境及定义，并增添示例（5/13）
 
 # 系统需求
 - Windows
