@@ -68,9 +68,11 @@
 \newcommand{\tocchapterfont}{\heiti\xiaosihao} % 目录上第X章的字体
 \newcommand{\tocsectionfont}{\songti\xiaosihao\normalfont}         % 目录上X.Y节的字体
 \newcommand{\tocsubsectionfont}{\songti\xiaosihao\normalfont}      % 目录上X.Y.Z小节的字体
+\newcommand{\tocsubsubsectionfont}{\songti\xiaosihao\normalfont}      % 目录上X.Y.Z.A小节的字体
 \newcommand{\textchapterfont}{\centering\heiti\sanhao\bfseries} % 正文上第X章的字体
 \newcommand{\textsectionfont}{\heiti\sihao\bfseries}            % 正文上X.Y节的字体
 \newcommand{\textsubsectionfont}{\heiti\xiaosihao\bfseries}     % 正文上X.Y.Z小节的字体
+\newcommand{\textsubsubsectionfont}{\heiti\xiaosihao\bfseries}     % 正文上X.Y.Z.A小节的字体
 \newcommand{\footnotefont}{\songti\xiaowuhao\normalfont}     % 脚注字体
 %\newcommand{\ftcaptionfont}{\kaishu\wuhao\normalfont}         % 图表标题的字体
 \newcommand{\ftcaptionfont}{\kaishu\wuhao}         % 图表标题的字体
@@ -124,16 +126,21 @@ pdfborder=001, linkcolor=black, citecolor=black]{hyperref}
 \def\ULthickness{1.1pt}%
 
 % Content style
+\setcounter{secnumdepth}{3} % let subsubsection have number
+\setcounter{tocdepth}{3} % let subsubsection appear in CONTENTS
 \usepackage{titletoc}
 \renewcommand\contentsname{\centerline{\toctitlefont{目\qquad{}录}}}
 \titlecontents{chapter}[0em]{\tocchapterfont\vspace{0.4mm}}
     {\CTEXnumber{\CJKsection}{\thecontentslabel}{第\CJKsection{章}\quad{}}}
     {}
     {\hspace{.5em}\titlerule*[10pt]{$\cdot$}\contentspage}
-\titlecontents{section}[2em]{\tocsectionfont\vspace{0.4mm}}{%
+\titlecontents{section}[1em]{\tocsectionfont\vspace{0.4mm}}{%
     \thecontentslabel\quad{}}{}{%
     \hspace{.5em}\titlerule*[10pt]{$\cdot$}\contentspage}%
-\titlecontents{subsection}[3em]{\tocsubsectionfont\vspace{0.4mm}}{%
+\titlecontents{subsection}[2em]{\tocsubsectionfont\vspace{0.4mm}}{%
+    \thecontentslabel\quad{}}{}{%
+    \hspace{.5em}\titlerule*[10pt]{$\cdot$}\contentspage}%
+\titlecontents{subsubsection}[3em]{\tocsubsubsectionfont\vspace{0.4mm}}{%
     \thecontentslabel\quad{}}{}{%
     \hspace{.5em}\titlerule*[10pt]{$\cdot$}\contentspage}%
 \makeatletter % Content Page style
@@ -158,7 +165,7 @@ pdfborder=001, linkcolor=black, citecolor=black]{hyperref}
 \titlespacing{\chapter}{0pt}{3ex plus .5ex minus .5ex}{3ex plus .5ex minus .5ex} % 缩短章节标题的上边距
 \titleformat{\section}{\textsectionfont}{\thesection}{1em}{}
 \titleformat{\subsection}{\textsubsectionfont}{\qquad{}\thesubsection}{1em}{}
-\titleformat{\subsubsection}{\textsubsectionfont}{\qquad{}\thesubsubsection}{0.5em}{}
+\titleformat{\subsubsection}{\textsubsubsectionfont}{\qquad{}\thesubsubsection}{1em}{}
 
 % Reference style
 % \usepackage[numbers,sort&compress]{natbib}

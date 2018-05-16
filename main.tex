@@ -99,6 +99,9 @@
 \section{公式与算法表示}
 
 \subsection{例子：基于主成分分析}
+
+\subsubsection{主成分分析算法}
+
 下面对主成分分析进行介绍。
 
 主成分分析是一种简单的机器学习算法，其功能可以从两方面解释：一方面可以认为它提供了一种压缩数据的方式，另一方面也可以认为它是一种学习数据表示的无监督学习算法。\cite{Goodfellow2016DeepLearning}
@@ -153,6 +156,7 @@
 \end{algorithmic}  
 \end{algorithm}
 
+\subsubsection{主成分分析可信度评估方法}
 记待判定微博$\bm{w}_0$的经典特征向量为$\bm{f}^{c}_{0}$，它的发布者在$\bm{w_0}$前发布的$k$条微博为$\bm{W} = \bm{w}_1,\bm{w}_2,\ldots,\bm{w}_k$，这$k$条微博对应的经典特征向量集为$\bm{F}^{c}_{W} = \{ \bm{f}^{c}_{1},\bm{f}^{c}_{2},\ldots,\bm{f}^{c}_{k} \}$。令$label = 1$代表谣言，$label = 0$代表非谣言。算法的具体流程如算法\ref{PCA_model}所示。
 
 \begin{algorithm} 
