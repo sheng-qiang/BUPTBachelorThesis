@@ -2,7 +2,6 @@
 \usepackage{BUPTthesisbachelor}
 \usepackage{setspace}
 
-
 %\lstdefinestyle{sharpc}{language=[Sharp]C, frame=lrtb, rulecolor=\color{blue!80!black}}
 
 
@@ -95,6 +94,21 @@
 %图片宽度设置为文本宽度的75%，可以调整为合适的比例
 \buptfigure[width=0.7\textwidth]{pictures/autoencoder}{自编码器结构}{autoencoder}
 
+%组图示例，已按照指导手册要求设计，由于子图数量不同，无法压缩成\buptfigure那样，大家对照示例即可
+\begin{figure}[!htbp]
+    \centering
+    \subfloat[]{ %[]对齐方式，t为top，b为bottom，留空即可
+	\label{Fig:R1} % 子图1标签名
+    	\includegraphics[width=0.45\textwidth]{pictures/autoencoder} %插入图片命令，格式为[配置]{图片路径}
+    }
+    \quad %空格
+    \subfloat[]{
+	\label{Fig:R2} % 子图2标签名
+    	\includegraphics[width=0.45\textwidth]{pictures/autoencoder}
+    }
+    \caption{这是两个自编码器结构，我就是排一下子图的效果：\protect\subref{Fig:R1}左边的自编码器，\protect\subref{Fig:R2}右边的自编码器} %注意须使用\protect\subref{}进行标号引用
+    \label{Fig:RecAccuracy} % 整个组图的标签名
+\end{figure}
 
 \section{公式与算法表示}
 

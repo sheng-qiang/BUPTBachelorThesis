@@ -182,18 +182,22 @@ pdfborder=001, linkcolor=black, citecolor=black]{hyperref}
 %% Some tweaking/features/styles
 
 % Figure & Table
-%\usepackage{caption}
-\usepackage{caption2,caption3}
+\usepackage{caption}
+\usepackage[position=t,singlelinecheck=off]{subfig}
+
+% \renewcommand\thesubfigure{\Alph{subfigure}}
+
 \renewcommand{\captionfont}{\ftcaptionfont}
 \renewcommand{\captionlabelfont}{\ftcaptionfont}
-\renewcommand{\captionlabeldelim}{}
+\DeclareCaptionLabelSeparator{twospace}{ ~}
+\captionsetup{labelsep=twospace}  %去掉图1：后冒号
 \renewcommand{\tablename}{表}
 \renewcommand{\thetable}{~\arabic{chapter}-\arabic{table}~}
 \renewcommand{\figurename}{图}
 \renewcommand{\thefigure}{~\arabic{chapter}-\arabic{figure}~}
 \renewcommand{\theequation}{\arabic{chapter}-\arabic{equation}~}
 
-% figure tweaking
+% single figure tweaking
 % New figure environment
 % Usage: \buptfigure[scale]{figure path}{caption}{label}
 \usepackage{graphicx} % graphic package
