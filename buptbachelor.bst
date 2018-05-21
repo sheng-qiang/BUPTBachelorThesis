@@ -15,8 +15,8 @@
 %% $LastChangedRevision$
 
 %% 一些设置的缺省值
-% 英文姓名排版格式字符串, 按<last name全称>~<first name首字母><, Jr.>格式
-FUNCTION {default.name.format.string} {"{vv~}{ll}{~f}{, Jj}"}
+% 英文姓名排版格式字符串, 按<last name全称>~<first name全程><, Jr.>格式，如果只保留首字母，将重复字母删去其中一个即可
+FUNCTION {default.name.format.string} {"{vv~}{ll}{~ff}{, Jj}"}
 
 % 列出的最多作者数目, 即当作者数目超过下列数字时, 超出部分的作者姓名将略去
 FUNCTION {default.max.num.names.before.forced.et.al} { #3 }
