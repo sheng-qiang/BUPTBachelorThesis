@@ -4,7 +4,12 @@
 * 修改：Guohua Wu       <ghmeta@163.com>
 * 修改：Qiang Sheng     <sqyx008@outlook.com>（信息与通信工程学院通信工程2014级）
 
-# 主要修改
+## 下载方式
+- ```git clone```本项目，追踪最新修改
+- 获取最新的发行版：https://github.com/sqyx008/BUPTBachelorThesis/releases/
+
+
+## 主要修改
 - 加入外文译文和原文板块（4/24）
 - 将附录合并于主文件（4/24）
 - 将封面、诚信声明改为PDF导入（4/24）
@@ -29,7 +34,7 @@
 - 新增无编号脚注与“科研项目来源”示例（5/21）
 - 修正附录图、表和公式编号样式为“附-X”，并添加示例（5/21）
 
-# 系统需求
+## 系统需求
 - Windows
 
     建议直接安装TeX Live（其中已包含需要的XeLaTeX和BibTeX），同时安装TeXworks（安装过程中有勾选框，选中即可）。你也可以使用“TeX Live + 自己喜爱的编辑器 + 扩展”的方式，如使用**TeX Live + Visual Studio Code + LaTeX workshop**或**TeX Live + Atom + language-latex + latex + pdf-view**。
@@ -44,14 +49,14 @@
 
     （感谢<a href="https://github.com/MrAdonis">Li Jiarong</a>提供）
 
-# 如何使用
+## 如何使用
 编辑以下文件
 
 - main.cfg: 包含了论文中需要填写的项目，比如论文名称等。论文的致谢部分也放在了这里
 
 - abstract.cfg: 包含了论文的中英文摘要
 
-- main.tex: 论文的主体、附录、外文译文
+- main.tex: 论文的主体、附录、外文译文，目前填充的是示例，对照生成的PDF熟悉代码
 
 - bib.ref: 论文的参考文献库
 
@@ -65,7 +70,7 @@
 
 在TeXworks中编译main.tex即可，main.pdf即最终输出。
 
-# 编译
+## 编译
 
 在TeX Live环境下
 
@@ -77,10 +82,12 @@
 
 （如果里面引用号码没有显示，就再XeLaTeX编译一遍。）
 
-# 初始发布日期
-2018/4/24
+## 发布记录
+初始上线日期：2018/4/24
 
-# FAQ
+最新发行版日期：2018/5/17
+
+## FAQ
 
 - **Q:LaTeX怎么这么麻烦？**
 
@@ -119,7 +126,7 @@
     A:如果是参考文献，确保你已经编译了最新的 ```.bib``` 文件；如果不是，再用XeLaTeX编译一遍。一种粗放的比喻是，**在这里的“编译”就如同Windows的“重启”一样**，虽然暴力但有用。
     
 
-# BTW
+## BTW
 欢迎大家去顶在北邮人论坛推广本项目的帖子，让更多人了解本项目：https://bbs.byr.cn/#!article/Paper/30043
 
 欢迎提出issue，**关于模板的问题请使用Issue功能提出，其它途径无法得到答复保证**，当然，更欢迎自行解决后提pull request。
