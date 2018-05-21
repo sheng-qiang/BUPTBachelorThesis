@@ -5,6 +5,7 @@
 \advance\c@footnote \@ne \expandafter\xdef \csname f@3\endcsname {\number\c@footnote }
 \advance\c@footnote \@ne \expandafter\xdef \csname f@4\endcsname {\number\c@footnote }
 \advance\c@footnote \@ne \expandafter\xdef \csname f@5\endcsname {\number\c@footnote }
+\advance\c@footnote \@ne \expandafter\xdef \csname f@6\endcsname {\number\c@footnote }
 \c@footnote \z@ 
 \c@footnote \z@ 
 \c@footnote \z@ 

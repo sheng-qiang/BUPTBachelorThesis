@@ -38,6 +38,10 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%% Main Area %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \chapter{基础模块示例}
+
+% 如果你的项目来源于科研项目，可以使用以下指令插入无编号脚注于正文第一页
+\blfootnote{本项目来源于科研项目“基于\LaTeX{}的本科毕业设计”，项目编号1124}
+
 \section{特殊文本类型}
 \subsection{脚注}
 社交媒体是一种供用户创建在线社群来分享信息、观点、个人信息和其它内容（如视频）的电子化交流平台，社交网络服务（social network service, SNS）和微博客（microblogging）都属于社交媒体的范畴\cite{webster_social_media}，国外较为知名的有Facebook\footnote{http://www.facebook.com/}、Instagram\footnote{https://www.instagram.com/}、Twitter\footnote{http://www.twitter.com/}、LinkedIn\footnote{http://www.linkedin.com/}等，国内较为知名的有新浪微博\footnote{http://www.weibo.com/}。
@@ -237,22 +241,37 @@ def plus_func(a, b):
 \normalsize\thankwords
 
 % Appendix
+\setcounter{figure}{0} 
+\renewcommand{\thefigure}{~附-\arabic{figure}~}
+\setcounter{equation}{0} 
+\renewcommand{\theequation}{~附-\arabic{equation}~}
+\setcounter{table}{0} 
+\renewcommand{\thetable}{~附-\arabic{table}~}
+
 \chapter*{附\qquad{}录}
 \phantomsection\addcontentsline{toc}{chapter}{附\qquad{}录}
 
 \phantomsection
 \addcontentsline{toc}{section}{附录1\quad{}缩略语表}
 \section*{附录1\quad{}缩略语表}
-\begin{center}
-	\begin{tabular}{ccc}
-		\textbf{英文缩写} & \textbf{英文名称} & \textbf{中文} \\
+
+\begin{bupttable}{基于浏览者行为的特征}{crowdwisdom}
+    \begin{tabular}{l|l|l}
+		\hline \textbf{特征} & \textbf{描述} & \textbf{形式与理论范围}\\
+		\hline 点赞量 & 微博的点赞数量 & 数值，$\mathbb{N}$ \\
+		\hline 评论量 & 微博的评论数量 & 数值，$\mathbb{N}$ \\
+		\hline 转发量 & 微博的转发数量 & 数值，$\mathbb{N}$ \\
 		\hline
-		AE & autoencoder & 自编码器\\
-		CRF & conditional random field & 条件随机场\\
-		LR & logistic regression & 逻辑回归\\
-		LSTM & Long Short Term Memory & 长短时记忆单元 \\
-	\end{tabular}
-\end{center}
+    \end{tabular}
+\end{bupttable}
+\buptfigure[width=0.7\textwidth]{pictures/autoencoder}{自编码器结构}{autoencoder}
+
+\begin{equation}
+\label{PCA_goal}
+\begin{aligned}
+\max_{\substack{\bm{W}}}  &  tr(\bm{W}^\mathrm{T}\bm{X}\bm{X}^ \mathrm{T}\bm{W})
+\end{aligned}
+\end{equation}
 
 \phantomsection
 \addcontentsline{toc}{section}{附录2\quad{}数学符号}

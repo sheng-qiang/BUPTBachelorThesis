@@ -113,11 +113,23 @@ pdfborder=001, linkcolor=black, citecolor=black, urlcolor=black]{hyperref}
 %\setlength{\parindent}{2em} % indent 2em
 
 % Footnote
+% Usage: \footnote{Your Text}
 \usepackage[perpage]{footmisc}
-\usepackage{footnpag} % footnote per page
-\usepackage{footnote}
-\let\ftnt=\footnote
-\renewcommand{\footnote}[1]{\ftnt{\footnotefont{#1}}} % footnote fontstyle
+% \usepackage{footnpag} % footnote per page
+% \usepackage{footnote}
+% \let\ftnt=\footnote
+% \renewcommand{\footnote}[1]{\ftnt{\footnotefont{#1}}}
+
+% No Number Footnote
+% Especially for stating which project the thesis is supported
+% Usage: \blfootnote{Your Text}
+\usepackage{lipsum}
+\newcommand\blfootnote[1]{% 
+\begingroup
+\renewcommand\thefootnote{}\footnote{#1}% 
+\addtocounter{footnote}{-1}% 
+\endgroup 
+}
 
 %%%%%% Detail style %%%%%%
 % Underline
