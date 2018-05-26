@@ -89,13 +89,15 @@
 
 % Margin
 % FIXME: Not very precise, but meets the need of the Word template.
-\usepackage[left=2.5cm,margin=2.5cm,headheight=1.5cm,footskip=1.5cm]{geometry}
+% \usepackage[left=2.5cm,margin=2.5cm,headheight=1.5cm,footskip=1.5cm]{geometry}
+\usepackage[left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm,headheight=1.5cm,headsep=0.6cm,footskip=0.4cm,textwidth=16cm,textheight=24.7cm]{geometry}
+
 
 % Header and footer
 \usepackage{fancyhdr}
 \fancyhf{}  % clear head and foot
 \fancyhead[C]{\headfont{北京邮电大学本科毕业设计(论文)}}
-\fancyfoot[C]{\thepage}
+\fancyfoot[C]{\footnotefont{\thepage}}
 
 % Bookmark  (Chinese bookmark supported)
 \usepackage{url}
@@ -105,7 +107,7 @@ bookmarksnumbered=true, bookmarksopen=true, colorlinks=true,
 pdfborder=001, linkcolor=black, citecolor=black, urlcolor=black]{hyperref}
 
 % Line spread
-\renewcommand{\baselinestretch}{1.3}
+\renewcommand{\baselinestretch}{1.30}
 % \setlength{\itemsep}{-5pt} % item seperate too wide
 
 % Indentation
