@@ -4,6 +4,10 @@
 * 修改：Guohua Wu       <ghmeta@163.com>
 * 修改：Qiang Sheng     <sqyx008@outlook.com>（信息与通信工程学院通信工程2014级）
 
+## 问卷调查
+如果你使用了本模板完成北京邮电大学本科毕业设计，**请填写以下问卷**，以帮助开源者获得更有效的反馈，谢谢。
+https://wj.qq.com/s/2116666/6661
+
 ## 下载方式
 - ```git clone```本项目，追踪最新修改
 - 获取最新的发行版：https://github.com/sqyx008/BUPTBachelorThesis/releases/
