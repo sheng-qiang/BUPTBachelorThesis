@@ -256,12 +256,20 @@ def plus_func(a, b):
 \section*{附录1\quad{}缩略语表}
 
 \begin{bupttable}{基于浏览者行为的特征}{crowdwisdom}
-    \begin{tabular}{l|l|l}
-		\hline \textbf{特征} & \textbf{描述} & \textbf{形式与理论范围}\\
-		\hline 点赞量 & 微博的点赞数量 & 数值，$\mathbb{N}$ \\
-		\hline 评论量 & 微博的评论数量 & 数值，$\mathbb{N}$ \\
-		\hline 转发量 & 微博的转发数量 & 数值，$\mathbb{N}$ \\
+    \begin{tabular}{l|l|l|l}
 		\hline
+        \multicolumn{1}{c|}{\multirow{2}{*}{\textbf{类别}}} & \multicolumn{1}{c|}{\multirow{2}{*}{\textbf{特征}}} & \multicolumn{2}{c}{\textbf{不知道叫什么的表头}} \\
+        \cline{3-4}
+         & & \multicolumn{1}{c|}{\textbf{描述}} & \multicolumn{1}{c}{\textbf{形式与理论范围}} \\
+		\hline
+        \multirow{3}{*}{正常互动} & 点赞量 & 微博的点赞数量 & 数值，$\mathbb{N}$ \\
+		\cline{2-4}
+         & 评论量 & 微博的评论数量 & 数值，$\mathbb{N}$ \\
+		\cline{2-4}
+         & 转发量 & 微博的转发数量 & 数值，$\mathbb{N}$ \\
+		\hline
+        非正常互动 & 羡慕量 & 微博的羡慕数量 & 数值，$\mathbb{N}$ \\
+        \hline
     \end{tabular}
 \end{bupttable}
 \buptfigure[width=0.7\textwidth]{pictures/autoencoder}{自编码器结构}{autoencoder}
