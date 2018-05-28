@@ -219,9 +219,10 @@ pdfborder=001, linkcolor=black, citecolor=black, urlcolor=black]{hyperref}
 \usepackage{graphicx} % graphic package
 \newcommand{\buptfigure}[4][width=11cm]{%
 \begin{figure}[!htbp]%
-    \begin{center}%
+    \centering % If you'd like to use center environment here, be advised that it will add extra white space at its top and bottom. So \centering is a better default option.
+%    \begin{center}
         \includegraphics[#1]{#2}%
-    \end{center}%
+%    \end{center}
     \caption{#3}%
     \label{#4}
 \end{figure}}
@@ -231,7 +232,7 @@ pdfborder=001, linkcolor=black, citecolor=black, urlcolor=black]{hyperref}
 % Usage: \begin{bupttable}{caption}{label} 
 %            <normal table>
 %        \end{bupttable}
-\usepackage{multirow} % multirow 
+\usepackage{multirow} % multirow and multicolumn
 \newenvironment{bupttable}[2]{%
 \begin{table}[!htbp]%
     \centering%

@@ -81,7 +81,7 @@
 此等信息的传播严重损害了有关公众人物的名誉权，降低了社交媒体服务商的商业美誉度，扰乱了网络空间秩序，冲击着网民的认知，极易对民众造成误导，带来诸多麻烦和经济损失，甚至会导致社会秩序的混乱。针对社交媒体谣言采取行动成为了有关部门、服务提供商和广大民众的共同选择。\cite{周兴2017基于深度学习的谣言检测及模式挖掘}
 
 \section{图表及其引用}
-此处引用了表\ref{crowdwisdom}。
+此处引用了简单的表\ref{crowdwisdom}。
 
 \begin{bupttable}{基于浏览者行为的特征}{crowdwisdom}
     \begin{tabular}{l|l|l}
@@ -92,6 +92,27 @@
 		\hline
     \end{tabular}
 \end{bupttable}
+
+此处引用了复杂的表\ref{complexcrowdwisdom}。
+
+\begin{bupttable}{基于浏览者行为的复杂特征}{complexcrowdwisdom}
+    \begin{tabular}{l|l|l|l}
+        \hline
+        \multicolumn{1}{c|}{\multirow{2}{*}{\textbf{类别}}} & \multicolumn{1}{c|}{\multirow{2}{*}{\textbf{特征}}} & \multicolumn{2}{c}{\textbf{不知道叫什么的表头}} \\
+        \cline{3-4}
+        & & \multicolumn{1}{c|}{\textbf{描述}} & \multicolumn{1}{c}{\textbf{形式与理论范围}} \\
+        \hline
+        \multirow{3}{*}{正常互动} & 点赞量 & 微博的点赞数量 & 数值，$\mathbb{N}$ \\
+        \cline{2-4}
+        & 评论量 & 微博的评论数量 & 数值，$\mathbb{N}$ \\
+        \cline{2-4}
+        & 转发量 & 微博的转发数量 & 数值，$\mathbb{N}$ \\
+        \hline
+        非正常互动 & 羡慕量 & 微博的羡慕数量 & 数值，$\mathbb{N}$ \\
+        \hline
+    \end{tabular}
+\end{bupttable}
+
 
 此处引用了一张图。图\ref{autoencoder}表示的是一个由含有4个神经元的输入层、含有3个神经元的隐藏层和含有4个神经元的输出层组成的自编码器，$+1$代表偏置项。
 
@@ -257,14 +278,32 @@ def plus_func(a, b):
 
 \begin{bupttable}{基于浏览者行为的特征}{crowdwisdom}
     \begin{tabular}{l|l|l}
-		\hline \textbf{特征} & \textbf{描述} & \textbf{形式与理论范围}\\
-		\hline 点赞量 & 微博的点赞数量 & 数值，$\mathbb{N}$ \\
-		\hline 评论量 & 微博的评论数量 & 数值，$\mathbb{N}$ \\
-		\hline 转发量 & 微博的转发数量 & 数值，$\mathbb{N}$ \\
-		\hline
+        \hline \textbf{特征} & \textbf{描述} & \textbf{形式与理论范围}\\
+        \hline 点赞量 & 微博的点赞数量 & 数值，$\mathbb{N}$ \\
+        \hline 评论量 & 微博的评论数量 & 数值，$\mathbb{N}$ \\
+        \hline 转发量 & 微博的转发数量 & 数值，$\mathbb{N}$ \\
+        \hline
     \end{tabular}
 \end{bupttable}
-\buptfigure[width=0.7\textwidth]{pictures/autoencoder}{自编码器结构}{autoencoder}
+
+\begin{bupttable}{基于浏览者行为的复杂特征}{complexcrowdwisdom}
+    \begin{tabular}{l|l|l|l}
+		\hline
+        \multicolumn{1}{c|}{\multirow{2}{*}{\textbf{类别}}} & \multicolumn{1}{c|}{\multirow{2}{*}{\textbf{特征}}} & \multicolumn{2}{c}{\textbf{不知道叫什么的表头}} \\
+        \cline{3-4}
+         & & \multicolumn{1}{c|}{\textbf{描述}} & \multicolumn{1}{c}{\textbf{形式与理论范围}} \\
+		\hline
+        \multirow{3}{*}{正常互动} & 点赞量 & 微博的点赞数量 & 数值，$\mathbb{N}$ \\
+		\cline{2-4}
+         & 评论量 & 微博的评论数量 & 数值，$\mathbb{N}$ \\
+		\cline{2-4}
+         & 转发量 & 微博的转发数量 & 数值，$\mathbb{N}$ \\
+		\hline
+        非正常互动 & 羡慕量 & 微博的羡慕数量 & 数值，$\mathbb{N}$ \\
+        \hline
+    \end{tabular}
+\end{bupttable}
+\buptfigure[width=0.2\textheight]{pictures/autoencoder}{自编码器结构}{autoencoder}
 
 \begin{equation}
 \label{PCA_goal}
@@ -273,6 +312,7 @@ def plus_func(a, b):
 \end{aligned}
 \end{equation}
 
+\clearpage
 \phantomsection
 \addcontentsline{toc}{section}{附录2\quad{}数学符号}
 \section*{附录2\quad{}数学符号}
