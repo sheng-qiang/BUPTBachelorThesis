@@ -83,7 +83,7 @@
 \section{图表及其引用}
 此处引用了简单的表\ref{crowdwisdom}。
 
-\begin{bupttable}{基于浏览者行为的特征}{crowdwisdom}
+\begin{bupttable}{基于浏览者行为的特征}{crowdwisdom_TMP}
     \begin{tabular}{l|l|l}
 		\hline \textbf{特征} & \textbf{描述} & \textbf{形式与理论范围}\\
 		\hline 点赞量 & 微博的点赞数量 & 数值，$\mathbb{N}$ \\
@@ -95,7 +95,7 @@
 
 此处引用了复杂的表\ref{complexcrowdwisdom}。
 
-\begin{bupttable}{基于浏览者行为的复杂特征}{complexcrowdwisdom}
+\begin{bupttable}{基于浏览者行为的复杂特征}{complexcrowdwisdom_TMP}
     \begin{tabular}{l|l|l|l}
         \hline
         \multicolumn{1}{c|}{\multirow{2}{*}{\textbf{类别}}} & \multicolumn{1}{c|}{\multirow{2}{*}{\textbf{特征}}} & \multicolumn{2}{c}{\textbf{不知道叫什么的表头}} \\
@@ -117,7 +117,7 @@
 此处引用了一张图。图\ref{autoencoder}表示的是一个由含有4个神经元的输入层、含有3个神经元的隐藏层和含有4个神经元的输出层组成的自编码器，$+1$代表偏置项。
 
 %图片宽度设置为文本宽度的75%，可以调整为合适的比例
-\buptfigure[width=0.7\textwidth]{pictures/autoencoder}{自编码器结构}{autoencoder}
+\buptfigure[width=0.7\textwidth]{pictures/autoencoder}{自编码器结构}{autoencoder_TMP}
 
 %组图示例，已按照指导手册要求设计，由于子图数量不同，无法压缩成\buptfigure那样，大家对照示例即可
 \begin{figure}[!htbp]
@@ -159,7 +159,7 @@
 
 由于我们知道新坐标系$\bm{W}$的列向量是标准正交基向量，且样本点集$\bm{X}$已经过中心化，则PCA的优化目标可以写为
 \begin{equation}
-\label{PCA_goal}
+\label{PCA_goal_TMP}
 \begin{aligned}
 & \max_{\substack{\bm{W}}}  &  tr(\bm{W}^\mathrm{T}\bm{X}\bm{X}^ \mathrm{T}\bm{W}) \\
 & \operatorname{ s.t. }  &  \bm{W}^\mathrm{T}\bm{W} = \bm{I} \\
@@ -173,7 +173,7 @@
 \end{equation}
 其中$\bm{\Lambda}=diag(\bm{\lambda})$，$\bm{\lambda} = \{\lambda_1,\lambda_2,\ldots,\lambda_m\}$。
 
-具体地，考虑到它是半正定矩阵的二次型，存在最大值，可对\eqref{PCA_goal}使用拉格朗日乘数法
+具体地，考虑到它是半正定矩阵的二次型，存在最大值，可对\eqref{PCA_goal_TMP}使用拉格朗日乘数法
 \begin{equation}
 \bm{X}\bm{X}^ \mathrm{ T }\bm{w}_i  = \lambda_i \bm{w}_i \\
 \end{equation}

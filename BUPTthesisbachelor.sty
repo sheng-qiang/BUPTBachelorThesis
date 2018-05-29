@@ -105,6 +105,10 @@
 \usepackage[xetex, pdfstartview=FitH, 
 bookmarksnumbered=true, bookmarksopen=true, colorlinks=true, 
 pdfborder=001, linkcolor=black, citecolor=black, urlcolor=black]{hyperref}
+\pdfstringdefDisableCommands{ % eliminate warnings about non-string commands not supported in PDF bookmarks. If you use more commands in section titles or chapter titles, you can add them here.
+    \def \quad{}
+    \def \qquad{}
+}
 
 % Line spread
 \renewcommand{\baselinestretch}{1.30}
