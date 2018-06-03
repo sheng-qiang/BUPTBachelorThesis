@@ -15,7 +15,7 @@
 %% $LastChangedRevision$
 
 %% 一些设置的缺省值
-% 英文姓名排版格式字符串, 按<last name全称>~<first name全程><, Jr.>格式，如果只保留首字母，将重复字母删去其中一个即可
+% 英文姓名排版格式字符串, 按<last name全称>~<first name首字母><, Jr.>格式
 FUNCTION {default.name.format.string} {"{vv~}{ll}{~ff}{, Jj}"}
 
 % 列出的最多作者数目, 即当作者数目超过下列数字时, 超出部分的作者姓名将略去
@@ -2046,7 +2046,10 @@ FUNCTION {format.address} {
   if$
   address empty$
     { "" }
-    { address }
+    { 
+      new.block
+      address 
+    }
   if$
 }
 
@@ -2061,22 +2064,35 @@ FUNCTION {format.month.year} {
   if$ 
 }
 
+FUNCTION {format.year} {
+  year empty$
+    { "There is month but no year in " cite$ * warning$ }
+    { new.block
+      year " " * 
+    }
+  if$ 
+}
+
 FUNCTION {format.collection.title} {
   booktitle empty$
     { "" }
     { new.block 
-      "In " booktitle *
+      language empty$
+        {"In "}
+        {"见"}
+      if$
+      booktitle *
 %       address empty$
-% 	{ skip$ }
-% 	{ bbl.comma * address * bbl.comma * 
-% 	  month empty$
-% 	    { skip$ }
-% 	    { month * }
-% 	  if$
-% 	  year empty$
-% 	    { skip$ }
-% 	    { " " * year * }
-% 	  if$
+% 	      { skip$ }
+% 	      { bbl.comma * address * bbl.comma * 
+% 	    month empty$
+% 	      { skip$ }
+% 	      { month * }
+% 	    if$
+% 	    year empty$
+% 	      { skip$ }
+% 	      { " " * year * }
+% 	    if$
 % 	}
 %       if$
     }
@@ -2245,14 +2261,15 @@ FUNCTION {inproceedings} {
 
   format.authors "author" output.warn
   format.book.title "title"  output.warn
-  format.collection.editors "editor" output.warn
+%  format.collection.editors "editor" output.warn
   format.collection.title "booktitle" output.warn
   format.address output
-  format.month.year output
+%  format.month.year output
+  format.year output
 %  format.address.publisher.year	output.nonnull % 出版项
   format.pages "pages"          output.warn    %
-  format.url                    output	       % URL
-  format.note                   output	       % 备注项 
+%  format.url                    output	       % URL
+%  format.note                   output	       % 备注项 
 %   format.in.booktitle "booktitle" output.warn
 %       %format.bvolume output
 %       %format.number.series output
