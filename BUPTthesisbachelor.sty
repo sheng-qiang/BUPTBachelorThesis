@@ -217,6 +217,8 @@ pdfborder=001, linkcolor=black, citecolor=black, urlcolor=black]{hyperref}
 \renewcommand{\figurename}{图}
 \renewcommand{\thefigure}{~\arabic{chapter}-\arabic{figure}~}
 \renewcommand{\theequation}{\arabic{chapter}-\arabic{equation}~}
+% 外文文献中表、图、公式编号重置
+\newcommand{\newtranschapter}{\thispagestyle{empty}\addtocounter{chapter}{1}\setcounter{table}{0}\setcounter{equation}{0}\setcounter{figure}{0}}
 
 % single figure tweaking
 % New figure environment
