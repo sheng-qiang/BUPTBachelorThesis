@@ -303,3 +303,11 @@ pdfborder=001, linkcolor=black, citecolor=black, urlcolor=black]{hyperref}
 
 % insert PDF
 \usepackage[final]{pdfpages}
+
+% insert blank page
+\makeatletter
+\newcommand\blankmatter{%
+    \if@openright\cleardoublepage\else\clearpage\fi%
+    \@mainmatterfalse%
+    \pagestyle{empty}}%
+\makeatother%
