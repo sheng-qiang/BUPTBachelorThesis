@@ -1,7 +1,7 @@
 %不需要区分奇偶页的请使用下面一行
-\documentclass[a4paper,AutoFakeBold,oneside,12pt]{book}
+%\documentclass[a4paper,AutoFakeBold,oneside,12pt]{book}
 %需要区分奇偶页的（即每一章第一页一定在奇数页上）请使用下面一行
-%\documentclass[a4paper,AutoFakeBold,openright,12pt]{book}
+\documentclass[a4paper,AutoFakeBold,openright,12pt]{book}
 \usepackage{BUPTthesisbachelor}
 \usepackage{setspace}
 
@@ -12,20 +12,20 @@
 \begin{document}
 
 % 封面
+\blankmatter
 \includepdf[pages=-]{docs/cover.pdf}  
-\newpage
 
 % 任务书
+\blankmatter
 \includepdf[pages=-]{docs/task.pdf}  
-\newpage
 
 % 成绩评定表
+\blankmatter
 \includepdf[pages=-]{docs/scoreTable.pdf}  
-\newpage
 
 % 诚信声明
+\blankmatter
 \includepdf[pages=-]{docs/statement.pdf} 
-\newpage
 
 \input{main.cfg}    % Main items 
 \include{abstract}  % Abstract
@@ -336,8 +336,6 @@ def plus_func(a, b):
 	\end{tabular}
 \end{center}
 
-
-
 \newpage\backmatter
 
 % Translation
@@ -362,7 +360,9 @@ def plus_func(a, b):
 \end{center}
 
 \songti{}
+\begingroup % 限制两个let语句的作用范围在外文译文部分
 \let\clearpage\relax
+\let\cleardoublepage\relax
 
 %以下是排版示例，在这里为了使章节编号不出现在目录中，使用了无编号的样式，代价是这些数字都要自己书写。另外，由于外文文献一般不是很长，为了排版紧凑，每一章被设置为不另起一页。
 
@@ -382,6 +382,8 @@ def plus_func(a, b):
 \end{aligned}
 \end{equation}
 
+我只是为了把第二章挤到下一页而凑的字。我只是为了把第二章挤到下一页而凑的字。我只是为了把第二章挤到下一页而凑的字。我只是为了把第二章挤到下一页而凑的字。我只是为了把第二章挤到下一页而凑的字。我只是为了把第二章挤到下一页而凑的字。我只是为了把第二章挤到下一页而凑的字。我只是为了把第二章挤到下一页而凑的字。我只是为了把第二章挤到下一页而凑的字。我只是为了把第二章挤到下一页而凑的字。我只是为了把第二章挤到下一页而凑的字。我只是为了把第二章挤到下一页而凑的字。我只是为了把第二章挤到下一页而凑的字。我只是为了把第二章挤到下一页而凑的字。我只是为了把第二章挤到下一页而凑的字。我只是为了把第二章挤到下一页而凑的字。我只是为了把第二章挤到下一页而凑的字。我只是为了把第二章挤到下一页而凑的字。我只是为了把第二章挤到下一页而凑的字。我只是为了把第二章挤到下一页而凑的字。我只是为了把第二章挤到下一页而凑的字。我只是为了把第二章挤到下一页而凑的字。我只是为了把第二章挤到下一页而凑的字。我只是为了把第二章挤到下一页而凑的字。
+
 \chapter*{第二章\quad{}我也不知道是什么}
 \newtranschapter
 
@@ -398,21 +400,30 @@ def plus_func(a, b):
 \end{aligned}
 \end{equation}
 
+新的社交网络技术在使信息的传播速度变快和规模变大的同时，也便利了不实信息（即不准确或有误导性的信息）的传播。然而，尽管我们对信息和新闻的获取越来越多地收到这些新技术的引导，但我们仍然对他们在虚假信息传播上的作用知之甚少。尽管媒体对假新闻传播的轶事分析给予了相当多的关注，但仍然几乎没有针对不实信息扩散或其发布源头的大规模实证调查。目前，虚假信息传播的研究仅仅局限于小的、局部的样本的分析上，而这些分析忽略了两个最重要的科学问题：真实信息和虚假信息的传播有什么不同？哪些人类判断中的因素可以解释这些不同？
+
+新的社交网络技术在使信息的传播速度变快和规模变大的同时，也便利了不实信息（即不准确或有误导性的信息）的传播。然而，尽管我们对信息和新闻的获取越来越多地收到这些新技术的引导，但我们仍然对他们在虚假信息传播上的作用知之甚少。尽管媒体对假新闻传播的轶事分析给予了相当多的关注，但仍然几乎没有针对不实信息扩散或其发布源头的大规模实证调查。目前，虚假信息传播的研究仅仅局限于小的、局部的样本的分析上，而这些分析忽略了两个最重要的科学问题：真实信息和虚假信息的传播有什么不同？哪些人类判断中的因素可以解释这些不同？
+
+新的社交网络技术在使信息的传播速度变快和规模变大的同时，也便利了不实信息（即不准确或有误导性的信息）的传播。然而，尽管我们对信息和新闻的获取越来越多地收到这些新技术的引导，但我们仍然对他们在虚假信息传播上的作用知之甚少。尽管媒体对假新闻传播的轶事分析给予了相当多的关注，但仍然几乎没有针对不实信息扩散或其发布源头的大规模实证调查。目前，虚假信息传播的研究仅仅局限于小的、局部的样本的分析上，而这些分析忽略了两个最重要的科学问题：真实信息和虚假信息的传播有什么不同？哪些人类判断中的因素可以解释这些不同？
+
+\endgroup
 
 % Translated Article
-\thispagestyle{empty}
-\begin{center}
+\blankmatter
+%\thispagestyle{empty}
+\centering
 % 原文第一页，PDF缩放比例为0.95，可以自行调整
 \includepdf[pages=1, scale=0.95, pagecommand=\heiti\sanhao{\textbf{外\quad{}文\quad{}原\quad{}文}}]{docs/translation.pdf}
 % 原文剩余部分
 \includepdf[pages=2-, scale=0.95, pagecommand={}]{docs/translation.pdf}
-\end{center}
 
 % 开题报告
+\blankmatter
 \includepdf[pages=-]{docs/openingReport.pdf} 
 
 
 % 中期检查表
+\blankmatter
 \includepdf[pages=-]{docs/interimReport.pdf} 
 
 
