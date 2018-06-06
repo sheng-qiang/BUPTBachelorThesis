@@ -1,7 +1,9 @@
+\def\thelstlisting{}
+
 %不需要区分奇偶页的请使用下面一行
-%\documentclass[a4paper,AutoFakeBold,oneside,12pt]{book}
+\documentclass[a4paper,AutoFakeBold,oneside,12pt]{book}
 %需要区分奇偶页的（即每一章第一页一定在奇数页上）请使用下面一行
-\documentclass[a4paper,AutoFakeBold,openright,12pt]{book}
+%\documentclass[a4paper,AutoFakeBold,openright,12pt]{book}
 \usepackage{BUPTthesisbachelor}
 \usepackage{setspace}
 
@@ -224,12 +226,20 @@
 \end{algorithm}
 
 \section{代码表示}
+
+%据悉以下语言被lstlisting支持：Awk, bash, Basi4, C#, C++, C, Delphi, erlang, Fortran, GCL, Haskell, HTML, Java, JVMIS, Lisp, Logo, Lua, make, Mathematica, Matlab, Objective C , Octave, Pascal, Perl, PHP, Prolog,  Python, R, Ruby, SAS, Scilab, sh, SHELXL, Simula, SQL, tcl, TeX, VBScript, Verilog, VHDL, XML, XSLT
+%遗憾的是，JavaScript不被支持，请上网搜索支持该语言的方法
+ 
 下面的代码\ref{plus}是用Python编写的加法函数。
 
 \begin{lstlisting}[language=Python, caption=加法, label=plus, tabsize=2]  
-def plus_func(a, b):
-	return a + b
+def plusFunc(a, b):
+	return a + b 
 \end{lstlisting}  
+
+下面的代码\ref{recursion}是用Python文件中引入的倒序打印$x$到$1$的函数。
+
+\lstinputlisting[language=Python, caption=倒序打印数字, label=recursion, tabsize=2]{code/recursion.py}
 
 \section{列表样式}
 
@@ -273,6 +283,12 @@ def plus_func(a, b):
 \renewcommand{\theequation}{~附-\arabic{equation}~}
 \setcounter{table}{0} 
 \renewcommand{\thetable}{~附-\arabic{table}~}
+\setcounter{lstlisting}{0} 
+\makeatletter
+  \renewcommand \thelstlisting
+       {附-\@arabic\c@lstlisting}
+\makeatother
+
 
 \chapter*{附\qquad{}录}
 \phantomsection\addcontentsline{toc}{chapter}{附\qquad{}录}
@@ -308,7 +324,12 @@ def plus_func(a, b):
         \hline
     \end{tabular}
 \end{bupttable}
-\buptfigure[width=0.2\textheight]{pictures/autoencoder}{自编码器结构}{autoencoder}
+\buptfigure[width=0.15\textheight]{pictures/autoencoder}{自编码器结构}{autoencoder}
+
+\begin{lstlisting}[language=Python, caption=减法, label=minus, tabsize=2]  
+def minusFunc(a, b):
+	return a - b 
+\end{lstlisting}  
 
 \begin{equation}
 \label{PCA_goal}

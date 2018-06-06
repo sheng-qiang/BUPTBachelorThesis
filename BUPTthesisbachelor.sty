@@ -277,7 +277,6 @@ pdfborder=001, linkcolor=black, citecolor=black, urlcolor=black]{hyperref}
 % Code 
 \usepackage{listings}
 \usepackage{xcolor}
-\renewcommand{\lstlistingname}{\kaishu{代码}}
 \lstset{
     basicstyle=\ttfamily\wuhao, %五号等宽字体
     extendedchars=true,
@@ -293,6 +292,7 @@ pdfborder=001, linkcolor=black, citecolor=black, urlcolor=black]{hyperref}
     basewidth={0.5em,0.35em},
     frame=single,              %单线边框，注释掉则无边框
     numbers=left,               %行号位于左侧
+    numberbychapter=true,
 %    xleftmargin=.5em,
 %    xrightmargin=.5em,
 %    aboveskip=1ex,
@@ -300,6 +300,15 @@ pdfborder=001, linkcolor=black, citecolor=black, urlcolor=black]{hyperref}
 %    mathescape,
     escapeinside={\%*}{*)}
 }
+
+\renewcommand{\lstlistingname}{\kaishu{代码}}
+\makeatletter
+\AtBeginDocument{%
+  \renewcommand \thelstlisting
+       {\ifnum \c@chapter>\z@ \thechapter-\fi \@arabic\c@lstlisting}%
+}
+\makeatother
+
 
 % insert PDF
 \usepackage[final]{pdfpages}
