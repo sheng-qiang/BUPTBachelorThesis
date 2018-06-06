@@ -65,6 +65,7 @@ https://wj.qq.com/s/2116666/6661</font>
     （感谢<a href="https://github.com/MrAdonis">Li Jiarong</a>提供）
 
 - Ubuntu Linux
+
     开源人员尚未在Ubuntu上进行过测试，欢迎尝试并顺利使用本模板的用户在Issue中提交自己的方案
 
 ## 如何使用
