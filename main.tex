@@ -120,6 +120,21 @@
     \end{tabular}
 \end{bupttable}
 
+此处展示了更专业的表\ref{tab:abbr_table}，一个好的表格没有竖线。
+% 请注意1）tabularx环境对多行文本的处理；2）booktabs宏包中支持的更粗的顶端和底端表格边界线，边界线与文本间更大的间距。
+\begin{bupttable}{红警2名词解释}{tab:abbr_table}
+    \begin{tabularx}{\textwidth}{llX}
+        \toprule
+        \textbf{术语类别} & \textbf{缩略语} & \textbf{解释} \\ \midrule
+        & 兵营 & 兵营（Barracks），《命令与征服\ 红色警戒2：尤里的复仇》游戏中的一种生产建筑，用以生产步兵单位 \\ \cmidrule(l){2-3}
+        & 建造场 & 建造场（Construction Yard），《命令与征服\ 红色警戒2：尤里的复仇》游戏中的一种基础建筑，用以支持其他建筑的建造 \\ \cmidrule(l){2-3}
+        & 矿厂 & 矿石精炼厂（Ore Refinery），《命令与征服\ 红色警戒2：尤里的复仇》游戏中的一种资源建筑，用以将矿车采集的矿石转化为游戏资金 \\ \cmidrule(l){2-3}
+        游戏 & 空指 & 空指部（Airforce Command Headquarters），《命令与征服\ 红色警戒2：尤里的复仇》游戏中的一种资源建筑，用以提供雷达功能和T2科技及生产部分空军单位 \\ \cmidrule(l){2-3}
+        & 相机 & 游戏术语，特指游戏内的观察区域和视角 \\ \cmidrule(l){2-3}
+        & 重工 & 战车工厂（War Factory），《命令与征服\ 红色警戒2：尤里的复仇》游戏中的一种生产建筑，用以生产载具单位 \\ \cmidrule(l){2-3}
+        & 战争迷雾 & 游戏术语，《命令与征服\ 红色警戒2：尤里的复仇》中指黑色的未探索区域 \\ \bottomrule
+    \end{tabularx}
+\end{bupttable}
 
 此处引用了一张图。图\ref{autoencoder}表示的是一个由含有4个神经元的输入层、含有3个神经元的隐藏层和含有4个神经元的输出层组成的自编码器，$+1$代表偏置项。
 
@@ -256,6 +271,12 @@ def plusFunc(a, b):
 \item \textbf{第一章为基础模块示例}，是的，就是本章。
 \item \textbf{第二章为不存在}，是的，其实它不存在。
 \end{enumerate}
+
+以下是句中列表样式。
+\begin{enumerate*}
+    \item \textbf{第一章为基础模块示例}，是的，就是本章；
+    \item \textbf{第二章为不存在}，是的，其实它不存在。
+\end{enumerate*}
 
 以下是无项目符号（实际是可以自定义一些符号，但我懒得加了）的列表样式，它会顶格书写。
 
@@ -397,7 +418,7 @@ def minusFunc(a, b):
 新的社交网络技术在使信息的传播速度变快和规模变大的同时，也便利了不实信息（即不准确或有误导性的信息）的传播。然而，尽管我们对信息和新闻的获取越来越多地收到这些新技术的引导，但我们仍然对他们在虚假信息传播上的作用知之甚少。尽管媒体对假新闻传播的轶事分析给予了相当多的关注，但仍然几乎没有针对不实信息扩散或其发布源头的大规模实证调查。目前，虚假信息传播的研究仅仅局限于小的、局部的样本的分析上，而这些分析忽略了两个最重要的科学问题：真实信息和虚假信息的传播有什么不同？哪些人类判断中的因素可以解释这些不同？
 
 \begin{equation}
-\label{PCA_goal}
+\label{PCA_goal_appx1}
 \begin{aligned}
 \max_{\substack{\bm{W}}}  &  tr(\bm{W}^\mathrm{T}\bm{X}\bm{X}^ \mathrm{T}\bm{W})
 \end{aligned}
@@ -415,7 +436,7 @@ def minusFunc(a, b):
 新的社交网络技术在使信息的传播速度变快和规模变大的同时，也便利了不实信息（即不准确或有误导性的信息）的传播。然而，尽管我们对信息和新闻的获取越来越多地收到这些新技术的引导，但我们仍然对他们在虚假信息传播上的作用知之甚少。尽管媒体对假新闻传播的轶事分析给予了相当多的关注，但仍然几乎没有针对不实信息扩散或其发布源头的大规模实证调查。目前，虚假信息传播的研究仅仅局限于小的、局部的样本的分析上，而这些分析忽略了两个最重要的科学问题：真实信息和虚假信息的传播有什么不同？哪些人类判断中的因素可以解释这些不同？
 
 \begin{equation}
-\label{PCA_goal}
+\label{PCA_goal_appx2}
 \begin{aligned}
 \max_{\substack{\bm{W}}}  &  tr(\bm{W}^\mathrm{T}\bm{X}\bm{X}^ \mathrm{T}\bm{W})
 \end{aligned}

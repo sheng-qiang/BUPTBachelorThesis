@@ -57,9 +57,9 @@
 \newcommand{\coverdatefont}{\songti\sanhao\bf}  % 封面上的日期的字体
 \newcommand{\statetitlefirst}{\songti\xiaosanhao\bf}   %诚信声明标题第一行的字体
 \newcommand{\statetitlesecond}{\songti\xiaosanhao\bf}  %诚信声明标题第二行的字体
-\newcommand{\abscnname}{\heiti\xiaosanhao\textbf}         % 中文“摘要”字样的字体
-\newcommand{\abscnkey}{\heiti\xiaosihao\textbf}       % 中文摘要“关键字”字样的字体
-\newcommand{\abscnkeys}{\songti\xiaosihao\normalfont} % 中文摘要关键字的字体
+\newcommand{\abszhname}{\heiti\xiaosanhao\textbf}         % 中文“摘要”字样的字体
+\newcommand{\abszhkey}{\heiti\xiaosihao\textbf}       % 中文摘要“关键字”字样的字体
+\newcommand{\abszhkeys}{\songti\xiaosihao\normalfont} % 中文摘要关键字的字体
 \newcommand{\absenname}{\xiaosanhao\textbf}               % 英文``Abstract''字样的字体
 \newcommand{\absenkey}{\xiaosihao\textbf}                 % 英文``KEY WORDS''字样的字体
 \newcommand{\absenkeys}{\xiaosihao\normalfont}        % 英文关键字的字体
@@ -106,7 +106,22 @@
 \usepackage[xetex, pdfstartview=FitH, 
 bookmarksnumbered=true, bookmarksopen=true, colorlinks=true, 
 pdfborder=001, linkcolor=black, citecolor=black, urlcolor=black]{hyperref}
-\pdfstringdefDisableCommands{ % eliminate warnings about non-string commands not supported in PDF bookmarks. If you use more commands in section titles or chapter titles, you can add them here.
+% Deal with line breaking in url
+\makeatletter
+\def\UrlAlphabet{%
+    \do\a\do\b\do\c\do\d\do\e\do\f\do\g\do\h\do\i\do\j%
+    \do\k\do\l\do\m\do\n\do\o\do\p\do\q\do\r\do\s\do\t%
+    \do\u\do\v\do\w\do\x\do\y\do\z\do\A\do\B\do\C\do\D%
+    \do\E\do\F\do\G\do\H\do\I\do\J\do\K\do\L\do\M\do\N%
+    \do\O\do\P\do\Q\do\R\do\S\do\T\do\U\do\V\do\W\do\X%
+    \do\Y\do\Z}
+\def\UrlDigits{\do\1\do\2\do\3\do\4\do\5\do\6\do\7\do\8\do\9\do\0}
+\g@addto@macro{\UrlBreaks}{\UrlOrds}
+\g@addto@macro{\UrlBreaks}{\UrlAlphabet}
+\g@addto@macro{\UrlBreaks}{\UrlDigits}
+\makeatother
+% Eliminate warnings about non-string commands not shown in PDF bookmarks. If you use more commands in section titles or chapter titles, you can add the commands here.
+\pdfstringdefDisableCommands{
     \def \quad{}
     \def \qquad{}
 }
@@ -239,7 +254,8 @@ pdfborder=001, linkcolor=black, citecolor=black, urlcolor=black]{hyperref}
 % Usage: \begin{bupttable}{caption}{label} 
 %            <normal table>
 %        \end{bupttable}
-\usepackage{multirow} % multirow and multicolumn
+\usepackage{array,booktabs,multirow} % multirow, multicolumn and more professional format support
+\usepackage{tabularx} % deal with text wrapping in tables
 \newenvironment{bupttable}[2]{%
 \begin{table}[!htbp]%
     \centering%
@@ -320,3 +336,9 @@ pdfborder=001, linkcolor=black, citecolor=black, urlcolor=black]{hyperref}
     \@mainmatterfalse%
     \pagestyle{empty}}%
 \makeatother%
+
+% List environment config
+\usepackage[inline]{enumitem}
+% Uncomment the two lines below if you want an list environment to share the same indent with a paragraph and no extra blank before, in or after the list.
+%\setlist[itemize]{labelindent=\parindent,leftmargin=*,noitemsep,topsep=0pt}
+%\setlist[enumerate]{labelindent=\parindent,leftmargin=*,noitemsep,topsep=0pt,label={\arabic*)}} % Modify the label format by yourself if you do not like 1), 2), ... here.
