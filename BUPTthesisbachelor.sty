@@ -339,6 +339,7 @@ pdfborder=001, linkcolor=black, citecolor=black, urlcolor=black]{hyperref}
 
 % List environment config
 \usepackage[inline]{enumitem}
-% Uncomment the two lines below if you want an list environment to share the same indent with a paragraph and no extra blank before, in or after the list.
-%\setlist[itemize]{labelindent=\parindent,leftmargin=*,noitemsep,topsep=0pt}
-%\setlist[enumerate]{labelindent=\parindent,leftmargin=*,noitemsep,topsep=0pt,label={\arabic*)}} % Modify the label format by yourself if you do not like 1), 2), ... here.
+% The three lines below make a list environment to share the same indent with a paragraph and eliminate extra vertical space before, in or after the list. In other words, an item in a list will look like a normal paragraph, especially when it has multiline. (If so, why list? Why not a paragraph directly? I don't know -_-)
+\setlist[itemize]{leftmargin=0pt,itemindent=*,labelindent=\parindent,noitemsep,topsep=0pt}
+\setlist[enumerate]{leftmargin=0pt,itemindent=*,labelindent=\parindent,noitemsep,topsep=0pt,label={\arabic*)}} % Modify the label format by yourself if you do not like 1), 2), ... here.
+\setlist[description]{leftmargin=0pt,itemindent=*,labelindent=\parindent,noitemsep,topsep=0pt}
