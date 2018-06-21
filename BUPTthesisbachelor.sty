@@ -100,6 +100,13 @@
 \fancyhead[C]{\headfont{北京邮电大学本科毕业设计(论文)}}
 \fancyfoot[C]{\footnotefont{\thepage}}
 
+\fancypagestyle{plain}{%
+\fancyhf{} % clear all header and footer fields
+\fancyhead{}
+\fancyfoot[C]{\xiaowuhao{\thepage}} % except the center
+\renewcommand{\headrulewidth}{0pt}
+}
+
 % Bookmark  (Chinese bookmark supported)
 \usepackage{url}
 \def\UrlFont{}
@@ -184,7 +191,8 @@ pdfborder=001, linkcolor=black, citecolor=black, urlcolor=black]{hyperref}
     \if@openright\cleardoublepage\else\clearpage\fi%
     \@mainmatterfalse%
     \pagenumbering{Roman}% Roman style page number
-    \pagestyle{plain}}%
+    \pagestyle{plain}
+    }
 \makeatother%
 
 \makeatletter % Translation Page style
@@ -210,6 +218,7 @@ pdfborder=001, linkcolor=black, citecolor=black, urlcolor=black]{hyperref}
 \renewcommand\bibname{\centerline{\reftitlefont{参考文献}}}
 %\renewcommand{\citet}[1]{\textsuperscript{\cite{#1}}}
 \setcitestyle{square}
+\setlength{\bibsep}{0.2em}
 
 % Appendix
 % TODO: this needs imporvement
