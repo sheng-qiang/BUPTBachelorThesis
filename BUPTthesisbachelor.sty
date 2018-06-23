@@ -96,14 +96,18 @@
 
 % Header and footer
 \usepackage{fancyhdr}
-\fancyhf{}  % clear head and foot
+
+\fancypagestyle{mainmatter}{%
+\fancyhf{} % clear all header and footer fields
 \fancyhead[C]{\headfont{北京邮电大学本科毕业设计(论文)}}
 \fancyfoot[C]{\footnotefont{\thepage}}
+\renewcommand{\headrulewidth}{0.8pt}
+}
 
-\fancypagestyle{plain}{%
+\fancypagestyle{frontmatter}{%
 \fancyhf{} % clear all header and footer fields
 \fancyhead{}
-\fancyfoot[C]{\xiaowuhao{\thepage}} % except the center
+\fancyfoot[C]{\footnotefont{\thepage}} % except the center
 \renewcommand{\headrulewidth}{0pt}
 }
 
@@ -191,7 +195,16 @@ pdfborder=001, linkcolor=black, citecolor=black, urlcolor=black]{hyperref}
     \if@openright\cleardoublepage\else\clearpage\fi%
     \@mainmatterfalse%
     \pagenumbering{Roman}% Roman style page number
-    \pagestyle{plain}
+    \pagestyle{frontmatter}
+    }
+\makeatother%
+
+\makeatletter % Content Page style
+\renewcommand\mainmatter{%
+    \if@openright\cleardoublepage\else\clearpage\fi%
+    \@mainmattertrue%
+    \pagenumbering{arabic}% Roman style page number
+    \pagestyle{mainmatter}
     }
 \makeatother%
 

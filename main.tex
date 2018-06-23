@@ -32,11 +32,11 @@
 \input{main.cfg}    % Main items 
 \include{abstract}  % Abstract
 \frontmatter\tableofcontents % Content
+\fancypagestyle{plain}{\pagestyle{frontmatter}}
 
 % 正文
 \newpage\mainmatter
-\fancypagestyle{plain}{\pagestyle{fancy}} % Add head to new chapter
-\pagestyle{fancy} % Head and foot
+\fancypagestyle{plain}{\pagestyle{mainmatter}}
 %\let\cleardoublepagebak=\cleardoublepage
 %\let\cleardoublepage\relax % Make new chapter stay on old page
 
@@ -55,27 +55,27 @@
 
 \subsection{定义、定理与引理等}
 \begin{definition}
-这是一条我也不知道在说什么的定义。\cite{周兴2017基于深度学习的谣言检测及模式挖掘}
+这是一条我也不知道在说什么的定义，反正我就是写在这里做个样子罢了，也没人会仔细读。\cite{周兴2017基于深度学习的谣言检测及模式挖掘}
 \end{definition}
 
 \begin{theorem}
-这是一条我也不知道在说什么的定理。
+这是一条我也不知道在说什么的定理，反正我就是写在这里做个样子罢了，也没人会仔细读。
 \end{theorem}
 
 \begin{axiom}
-这是一条我也不知道在说什么的公理。
+这是一条我也不知道在说什么的公理，反正我就是写在这里做个样子罢了，也没人会仔细读。
 \end{axiom}
 
 \begin{lemma}
-这是一条我也不知道在说什么的引理。
+这是一条我也不知道在说什么的引理，反正我就是写在这里做个样子罢了，也没人会仔细读。
 \end{lemma}
 
 \begin{proposition}
-这是一条我也不知道在说什么的命题。
+这是一条我也不知道在说什么的命题，反正我就是写在这里做个样子罢了，也没人会仔细读。
 \end{proposition}
 
 \begin{corollary}
-这是一条我也不知道在说什么的推论。
+这是一条我也不知道在说什么的推论，反正我就是写在这里做个样子罢了，也没人会仔细读。
 \end{corollary}
 
 \subsection{中英文文献、学位论文引用}
@@ -87,6 +87,8 @@
 
 \section{图表及其引用}
 此处引用了简单的表\ref{crowdwisdom_TMP}。
+
+请注意，\LaTeX{}的图表排版规则决定了图表\textbf{不一定会乖乖呆在你插入的地方}，这是为了避免Word中由于图片尺寸不匹配在页面下部出现的的空白，所以请不要使用“下图”“下表”作为指向文字，应使用“图1-1所示”这样的表述。
 
 \begin{bupttable}{基于浏览者行为的特征}{crowdwisdom_TMP}
 
@@ -201,50 +203,56 @@
 \end{equation}
 
 之后将求得的特征值降序排列，取前$d^\prime$个特征值对应的特征向量组成所需的投影矩阵$\bm{W}^\prime =(\bm{w}_1,\bm{w}_2,\ldots,\bm{w}_{d^\prime})$，即可得到PCA的解。PCA算法的描述如算法\ref{PCA_algorithm}所示。
+
 \begin{algorithm} 
-\floatname{algorithm}{算法}
-\caption{主成分分析（PCA）} 
-\label{PCA_algorithm}
-\renewcommand{\algorithmicrequire}{\textbf{输入：}}
-\renewcommand{\algorithmicensure}{\textbf{输出：}} 
-\begin{algorithmic}[1] 
-\Require 样本集$\bm{x}=\{\bm{x}_1,\bm{x}_2,\ldots,\bm{x}_i,\ldots,\bm{x}_m\}$，低维空间维数$d^\prime$ 
-\Ensure 投影矩阵  $\bm{W}^\prime =(\bm{w}_1,\bm{w}_2,\ldots,\bm{w}_{d^\prime})$
-\State 对所有样本中心化$\bm{x}_i \gets \bm{x}_i - \frac{1}{m}\sum_{i=1}^m \bm{x}_i$
-\State  计算样本的协方差$\bm{X}\bm{X}^ \mathrm{T}$
-\State 对协方差矩阵$\bm{X}\bm{X}^ \mathrm{T}$做特征值分解
-\State 取最大的$d^\prime$个特征值所对应的特征向量$\bm{w}_1,\bm{w}_2,\ldots,\bm{w}_{d^\prime}$
-\end{algorithmic}  
+	\begin{spacing}{1.3}
+		\floatname{algorithm}{算法}
+		\caption{主成分分析（PCA）} 
+		\label{PCA_algorithm}
+		\renewcommand{\algorithmicrequire}{\textbf{输入：}}
+		\renewcommand{\algorithmicensure}{\textbf{输出：}} 
+		\begin{algorithmic}[1] 
+			\Require 样本集$\bm{x}=\{\bm{x}_1,\bm{x}_2,\ldots,\bm{x}_i,\ldots,\bm{x}_m\}$，低维空间维数$d^\prime$ 
+			\Ensure 投影矩阵  $\bm{W}^\prime =(\bm{w}_1,\bm{w}_2,\ldots,\bm{w}_{d^\prime})$
+			\State 对所有样本中心化$\bm{x}_i \gets \bm{x}_i - \frac{1}{m}\sum_{i=1}^m \bm{x}_i$
+			\State  计算样本的协方差$\bm{X}\bm{X}^ \mathrm{T}$
+			\State 对协方差矩阵$\bm{X}\bm{X}^ \mathrm{T}$做特征值分解
+			\State 取最大的$d^\prime$个特征值所对应的特征向量$\bm{w}_1,\bm{w}_2,\ldots,\bm{w}_{d^\prime}$
+		\end{algorithmic}  
+	\end{spacing}
 \end{algorithm}
 
 \subsubsection{主成分分析可信度评估方法}
 记待判定微博$\bm{w}_0$的经典特征向量为$\bm{f}^{c}_{0}$，它的发布者在$\bm{w_0}$前发布的$k$条微博为$\bm{W} = \bm{w}_1,\bm{w}_2,\ldots,\bm{w}_k$，这$k$条微博对应的经典特征向量集为$\bm{F}^{c}_{W} = \{ \bm{f}^{c}_{1},\bm{f}^{c}_{2},\ldots,\bm{f}^{c}_{k} \}$。令$label = 1$代表谣言，$label = 0$代表非谣言。算法的具体流程如算法\ref{PCA_model}所示。
 
-\begin{algorithm} 
-\floatname{algorithm}{算法}
-\caption{基于PCA的信息可信度评估} 
-\label{PCA_model}
-\renewcommand{\algorithmicrequire}{\textbf{输入：}}
-\renewcommand{\algorithmicensure}{\textbf{输出：}} 
-	\begin{algorithmic}[1] 
-	\Require $\bm{f}^{c}_{0}$，$\bm{F}^{c}_{W}$，保留主成分数$n$
-	\Ensure 标签$label\in \{0,1\}$
-	\State 对所有特征向量应用PCA，保留前$n$个主成分$\bm{o}^{c}_{i} \gets PCA(\bm{f}^{c}_{i}, n)$（$i = 0,1,\ldots,k$）
-	\State 计算$\bm{F}^{c}_{W}$中各向量的平均距离$\mu$和标准差$\sigma$
-	\State 计算阈值$thr = {\mu} / {\sigma}$
-	\If {$\min_{1<j\le k} \|\bm{o}^{c}_{0} - \bm{o}^{c}_{j} \|_2 > thr$}
-		\State $ label \gets 1 $
-	\Else
-		\State $ label \gets 0 $
-	\EndIf
-	\end{algorithmic}
+\begin{algorithm}
+	\begin{spacing}{1.3}
+		\floatname{algorithm}{算法}
+		\caption{基于PCA的信息可信度评估} 
+		\label{PCA_model}
+		\renewcommand{\algorithmicrequire}{\textbf{输入：}}
+		\renewcommand{\algorithmicensure}{\textbf{输出：}} 
+			\begin{algorithmic}[1] 
+				\Require $\bm{f}^{c}_{0}$，$\bm{F}^{c}_{W}$，保留主成分数$n$
+				\Ensure 标签$label\in \{0,1\}$
+				\State 对所有特征向量应用PCA，保留前$n$个主成分$\bm{o}^{c}_{i} \gets PCA(\bm{f}^{c}_{i}, n)$（$i = 0,1,\ldots,k$）
+				\State 计算$\bm{F}^{c}_{W}$中各向量的平均距离$\mu$和标准差$\sigma$
+				\State 计算阈值$thr = {\mu} / {\sigma}$
+				\If {$\min_{1<j\le k} \|\bm{o}^{c}_{0} - \bm{o}^{c}_{j} \|_2 > thr$}
+					\State $ label \gets 1 $
+				\Else
+					\State $ label \gets 0 $
+				\EndIf
+			\end{algorithmic}
+	\end{spacing}
 \end{algorithm}
 
 \section{代码表示}
 
 %据悉以下语言被lstlisting支持：Awk, bash, Basi4, C#, C++, C, Delphi, erlang, Fortran, GCL, Haskell, HTML, Java, JVMIS, Lisp, Logo, Lua, make, Mathematica, Matlab, Objective C , Octave, Pascal, Perl, PHP, Prolog,  Python, R, Ruby, SAS, Scilab, sh, SHELXL, Simula, SQL, tcl, TeX, VBScript, Verilog, VHDL, XML, XSLT
 %遗憾的是，JavaScript不被支持，请上网搜索支持该语言的方法
- 
+
+\subsection{直接书写代码在.tex中}
 下面的代码\ref{plus}是用Python编写的加法函数。
 
 \begin{lstlisting}[language=Python, caption=加法, label=plus, tabsize=2]  
@@ -252,38 +260,33 @@ def plusFunc(a, b):
 	return a + b 
 \end{lstlisting}  
 
-下面的代码\ref{recursion}是用Python文件中引入的倒序打印$x$到$1$的函数。
+\subsection{引用代码文件}
+下面的代码\ref{recursion}是用Python文件中引入的倒序打印$x$到$1$的函数，请查看code文件夹。
 
 \lstinputlisting[language=Python, caption=倒序打印数字, label=recursion, tabsize=2]{code/recursion.py}
 
 \section{列表样式}
 
-以下是使用圆点作为项目符号的列表样式。
+\subsection{使用圆点作为项目符号}
 
 \begin{itemize}
-\item \textbf{第一章为基础模块示例}，是的，就是本章。
+\item \textbf{第一章为基础模块示例}，是的，本章的名字就是基础模块示例，正如你看到这个样子。
 \item \textbf{第二章为不存在}，是的，其实它不存在。
 \end{itemize}
 
-以下是使用数字作为项目符号的列表样式。
+\subsection{使用数字作为项目符号}
 
 \begin{enumerate}
-\item \textbf{第一章为基础模块示例}，是的，就是本章。
+\item \textbf{第一章为基础模块示例}，是的，本章的名字就是基础模块示例，正如你看到这个样子。
 \item \textbf{第二章为不存在}，是的，其实它不存在。
 \end{enumerate}
 
-以下是句中列表样式。
+\subsection{句中数字编号列表样式}
+
 \begin{enumerate*}
-    \item \textbf{第一章为基础模块示例}，是的，就是本章；
+    \item \textbf{第一章为基础模块示例}，是的，本章的名字就是基础模块示例，正如你看到这个样子；
     \item \textbf{第二章为不存在}，是的，其实它不存在。
 \end{enumerate*}
-
-以下是无项目符号（实际是可以自定义一些符号，但我懒得加了）的列表样式，它会顶格书写。
-
-\begin{description}
-\item \textbf{第一章为基础模块示例}，是的，就是本章。
-\item \textbf{第二章为不存在}，是的，其实它不存在。
-\end{description}
 
 %%%%%%%%%%%%%%%%%%%%%%% Main Area ENDs Here %%%%%%%%%%%%%%%%%%%%%%%%
 %\let\cleardoublepage=\cleardoublepagebak
@@ -380,6 +383,16 @@ def minusFunc(a, b):
 
 \newpage\backmatter
 
+% Translated Article
+\blankmatter
+\thispagestyle{empty}
+\begin{center}
+% 原文第一页，PDF缩放比例为0.95，可以自行调整
+\includepdf[pages=1, scale=0.95, pagecommand=\heiti\sanhao{外\quad{}文\quad{}原\quad{}文}]{docs/translation.pdf}
+% 原文剩余部分
+\includepdf[pages=2-, scale=0.95, pagecommand={}]{docs/translation.pdf}
+\end{center}
+
 % Translation
 \setcounter{chapter}{0}
 \renewcommand{\thefigure}{~外\arabic{chapter}-\arabic{figure}~}
@@ -449,15 +462,6 @@ def minusFunc(a, b):
 新的社交网络技术在使信息的传播速度变快和规模变大的同时，也便利了不实信息（即不准确或有误导性的信息）的传播。然而，尽管我们对信息和新闻的获取越来越多地收到这些新技术的引导，但我们仍然对他们在虚假信息传播上的作用知之甚少。尽管媒体对假新闻传播的轶事分析给予了相当多的关注，但仍然几乎没有针对不实信息扩散或其发布源头的大规模实证调查。目前，虚假信息传播的研究仅仅局限于小的、局部的样本的分析上，而这些分析忽略了两个最重要的科学问题：真实信息和虚假信息的传播有什么不同？哪些人类判断中的因素可以解释这些不同？
 
 \endgroup
-
-% Translated Article
-\blankmatter
-%\thispagestyle{empty}
-\centering
-% 原文第一页，PDF缩放比例为0.95，可以自行调整
-\includepdf[pages=1, scale=0.95, pagecommand=\heiti\sanhao{\textbf{外\quad{}文\quad{}原\quad{}文}}]{docs/translation.pdf}
-% 原文剩余部分
-\includepdf[pages=2-, scale=0.95, pagecommand={}]{docs/translation.pdf}
 
 % 开题报告
 \blankmatter
