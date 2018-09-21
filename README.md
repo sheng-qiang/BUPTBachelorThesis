@@ -2,7 +2,7 @@
 * 作者：Caspar Zhang    <casparant@gmail.com>
 * 修改：Bing Hsu        <hello@antinucleon.com>
 * 修改：Guohua Wu       <ghmeta@163.com>
-* 修改：Qiang Sheng     <sqyx008@outlook.com>（信息与通信工程学院通信工程2014级）
+* 修改：盛强     <sqyx008@outlook.com>（信息与通信工程学院通信工程2014级）
 
 ## 问卷调查
 <font color=#FF3300>如果你使用了本模板完成北京邮电大学本科毕业设计，**请填写以下问卷**，以帮助开源者获得更有效的反馈，谢谢。
