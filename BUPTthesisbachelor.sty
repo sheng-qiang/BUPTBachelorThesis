@@ -180,16 +180,16 @@ pdfborder=001, linkcolor=black, citecolor=black, urlcolor=black]{hyperref}
 \titlecontents{chapter}[0em]{\tocchapterfont\vspace{0.4mm}}
     {\CTEXnumber{\CJKsection}{\thecontentslabel}{第\CJKsection{章}\quad{}}}
     {}
-    {\hspace{.5em}\titlerule*[10pt]{$\cdot$}\contentspage}
+    {\hspace{.5em}\titlerule*[6pt]{$\cdot$}\contentspage}
 \titlecontents{section}[1em]{\tocsectionfont\vspace{0.4mm}}{%
     \thecontentslabel\quad{}}{}{%
-    \hspace{.5em}\titlerule*[10pt]{$\cdot$}\contentspage}%
+    \hspace{.5em}\titlerule*[6pt]{$\cdot$}\contentspage}%
 \titlecontents{subsection}[2em]{\tocsubsectionfont\vspace{0.4mm}}{%
     \thecontentslabel\quad{}}{}{%
-    \hspace{.5em}\titlerule*[10pt]{$\cdot$}\contentspage}%
+    \hspace{.5em}\titlerule*[6pt]{$\cdot$}\contentspage}%
 \titlecontents{subsubsection}[3em]{\tocsubsubsectionfont\vspace{0.4mm}}{%
     \thecontentslabel\quad{}}{}{%
-    \hspace{.5em}\titlerule*[10pt]{$\cdot$}\contentspage}%
+    \hspace{.5em}\titlerule*[6pt]{$\cdot$}\contentspage}%
 \makeatletter % Content Page style
 \renewcommand\frontmatter{%
     \if@openright\cleardoublepage\else\clearpage\fi%
@@ -219,7 +219,7 @@ pdfborder=001, linkcolor=black, citecolor=black, urlcolor=black]{hyperref}
 % Text style
 \usepackage{titlesec}
 \titleformat{\chapter}[hang]{\textchapterfont}{第\chinese{chapter}章}{1em}{}
-\titlespacing{\chapter}{0pt}{3ex plus .5ex minus .5ex}{3ex plus .5ex minus .5ex} % 缩短章节标题的上边距
+\titlespacing{\chapter}{0pt}{-1ex plus .2ex minus .2ex}{-1ex plus .2ex minus .2ex} % 缩短章节标题的上边距
 \titleformat{\section}{\textsectionfont}{\thesection}{1em}{}
 \titleformat{\subsection}{\textsubsectionfont}{\qquad{}\thesubsection}{1em}{}
 \titleformat{\subsubsection}{\textsubsubsectionfont}{\qquad{}\thesubsubsection}{1em}{}
