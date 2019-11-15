@@ -82,13 +82,13 @@ https://wj.qq.com/s/2116666/6661</font>
 
 - main.tex: 论文的主体、附录、外文译文，目前填充的是示例，对照生成的PDF熟悉代码
 
-- bib.ref: 论文的参考文献库
+- ref.bib: 论文的参考文献库
 
 ### 用素材填充以下文件夹
 
 - pictures:将图片放入该文件夹
 
-- docs：将封面（cover）、诚信声明（statement）、外文文献原文（translation）、任务书（task）、成绩评定表（scoreTable）、开题报告（openingReport）和中期检查表（interimReport）的PDF放入该文件夹。为了保持清晰度，请在从Word输出PDF时尽可能选择**高质量**的设置（修正官方缺陷的封面及其他材料的word版已放入该文件夹，编辑并保存为PDF即可）
+- docs：将封面（cover）、诚信声明（statement）、外文文献原文（translation）、任务书（task）、成绩评定表（scoreTable）、开题报告（openingReport）和中期检查表（interimReport）的**PDF**放入该文件夹。为了保持清晰度，请在从Word输出PDF时尽可能选择**高质量**的设置（修正官方缺陷的封面及其他材料的word版已放入该文件夹，编辑并保存为PDF即可）
 
 教务处官方相关模板请访问https://jwc.bupt.edu.cn/list/list.php?p=9_38_1
 
@@ -137,9 +137,9 @@ https://wj.qq.com/s/2116666/6661</font>
     A:从上面的资料你已经知道需要编辑的文件有哪些，给它们备个份，然后```git pull ```一下，再把备份文件换回；或者直接全盘在另一文件夹编辑你的文档，把更新的配置文件复制过去覆盖即可。
     
 - **Q:有一些我需要的排版方式这里没有怎么办？**
-    
+  
     A:模板基于LaTeX，你可以随意加入你需要的package，调用你需要的命令。如果你发现你的改动有一定通用性，欢迎修改相应的配置文件提交Pull Request给我；如果你的能力有限，也可以提Issue详述你的改动。合理的Pull Request会被及时merge进master分支，你将在**Contributors**中看到自己，开源项目需要大家共同努力维护。
- 
+
 - **Q:引用文献的BibTeX文件可以从哪里获取？**
 
     A:几乎任何学术文献库都会提供BibTeX格式的引用数据，你可以使用**JabRef**来管理和自动生成你引用文献的BibTeX。但在引用量不大的情况下，直接去学术搜索引擎和数据库（Google Scholar/IEEEXplore/ACM digital library/Springer Link/必应学术/百度学术）或学术组织官网（CVF）去复制也不麻烦。
