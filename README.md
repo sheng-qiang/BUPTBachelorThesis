@@ -1,4 +1,8 @@
-﻿# 北京邮电大学本科学士学位论文模板（本科毕业设计模板）
+# Update
+
+**BYRIO社区已Fork本项目并计划以社区名义持续维护该模板，请大家参考：https://github.com/BYRIO/BUPTBachelorThesis**
+
+# 北京邮电大学本科学士学位论文模板（本科毕业设计模板）
 * 作者：Caspar Zhang    <casparant@gmail.com>
 * 修改：Bing Hsu        <hello@antinucleon.com>
 * 修改：Guohua Wu       <ghmeta@163.com>
